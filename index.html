@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junior Science</title>
+  <style>
+    /* ── Self-hosted fonts ─────────────────────────────────────────── */
+    @font-face {
+      font-family: 'Fraunces';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('fonts/fraunces-700-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC,
+                     U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+                     U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+                     U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('fonts/inter-400-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC,
+                     U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+                     U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+                     U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url('fonts/inter-500-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC,
+                     U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+                     U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+                     U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url('fonts/inter-700-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC,
+                     U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+                     U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+                     U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* ── Reset & base ──────────────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --paper:   #f7f1e3;
+      --ink:     #1b1a17;
+      --ink-mid: #3a3830;
+      --radius:  14px;
+      --shadow:  6px 6px 0 #1b1a17;
+
+      /* Year accent colours */
+      --y7:  #0f766e;
+      --y8:  #7a3a9b;
+      --y9:  #4b7bc9;
+      --y10: #7a3a9b;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      font-weight: 400;
+      background-color: var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+      padding: 2rem 1rem 4rem;
+      /* Subtle dot-grid texture evoking grid paper */
+      background-image: radial-gradient(circle, #c8bfa8 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+
+    /* ── Layout ────────────────────────────────────────────────────── */
+    .site-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ────────────────────────────────────────────────────── */
+    .site-header {
+      text-align: center;
+      padding: 2.5rem 1rem 1rem;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .site-header h1 {
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-weight: 700;
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .site-header .subtitle {
+      margin-top: 0.6rem;
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      font-weight: 500;
+      color: var(--ink-mid);
+    }
+
+    /* ── Jump-back banner ──────────────────────────────────────────── */
+    #jump-back {
+      display: none; /* shown by JS */
+      margin-bottom: 1.75rem;
+      padding: 0.7rem 1.2rem;
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    #jump-back a {
+      color: #ffd166;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    #jump-back a:hover,
+    #jump-back a:focus {
+      text-decoration: underline;
+    }
+
+    #jump-back a:focus-visible {
+      outline: 3px solid #ffd166;
+      outline-offset: 2px;
+      border-radius: 3px;
+    }
+
+    /* ── Year card grid ────────────────────────────────────────────── */
+    .year-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 540px) {
+      .year-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 820px) {
+      .year-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+      }
+    }
+
+    /* ── Individual card ───────────────────────────────────────────── */
+    .year-card {
+      display: block; /* <a> as block */
+      text-decoration: none;
+      color: var(--ink);
+      background: var(--paper);
+      border: 2px solid var(--ink);
+      border-left: 8px solid var(--accent);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem 1.4rem 1.6rem;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      position: relative;
+      /* Ensure accent var flows from inline style */
+      --accent: currentColor;
+    }
+
+    .year-card:hover,
+    .year-card:focus-visible {
+      transform: translate(-3px, -3px);
+      box-shadow: 9px 9px 0 var(--ink);
+      outline: none;
+    }
+
+    .year-card:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .year-card:active {
+      transform: translate(2px, 2px);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    /* Badge (Y7, Y8 …) */
+    .card-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      margin-bottom: 0.65rem;
+    }
+
+    /* Year heading */
+    .card-heading {
+      font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+      font-weight: 700;
+      font-size: clamp(1.55rem, 4vw, 2rem);
+      color: var(--accent);
+      line-height: 1.15;
+      margin-bottom: 0.9rem;
+    }
+
+    /* Topic list */
+    .card-topics {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .card-topics li {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--ink-mid);
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .card-topics li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    /* Arrow nudge in bottom-right */
+    .card-arrow {
+      position: absolute;
+      bottom: 1rem;
+      right: 1.1rem;
+      font-size: 1.1rem;
+      color: var(--accent);
+      opacity: 0.7;
+      transition: opacity 0.12s, transform 0.12s;
+    }
+
+    .year-card:hover .card-arrow,
+    .year-card:focus-visible .card-arrow {
+      opacity: 1;
+      transform: translateX(3px);
+    }
+
+    /* ── Footer ────────────────────────────────────────────────────── */
+    .site-footer {
+      margin-top: 3rem;
+      padding-top: 1.25rem;
+      border-top: 2px solid var(--ink);
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--ink-mid);
+    }
+  </style>
+</head>
+<body>
+  <div class="site-wrapper">
+
+    <header class="site-header">
+      <h1>Junior Science</h1>
+      <p class="subtitle">Self-paced interactive science for NSW Stages&nbsp;4–5.</p>
+    </header>
+
+    <!-- Jump-back banner — shown by JS if localStorage has a saved year -->
+    <div id="jump-back" role="note" aria-live="polite"></div>
+
+    <main>
+      <nav aria-label="Year groups">
+        <ul class="year-grid" role="list">
+
+          <!-- Year 7 -->
+          <li>
+            <a class="year-card"
+               href="https://irvincisneros-png.github.io/Year-7/"
+               style="--accent: #0f766e;"
+               data-year="7"
+               aria-label="Year 7 Science — Observing the Universe, Forces, Cells and Classification, Solutions and Mixtures">
+              <span class="card-badge">Year 7</span>
+              <div class="card-heading">Year 7 Science</div>
+              <ul class="card-topics" aria-hidden="true">
+                <li>Observing the Universe</li>
+                <li>Forces</li>
+                <li>Cells and Classification</li>
+                <li>Solutions and Mixtures</li>
+              </ul>
+              <span class="card-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+
+          <!-- Year 8 -->
+          <li>
+            <a class="year-card"
+               href="https://irvincisneros-png.github.io/Year-8-Science/"
+               style="--accent: #7a3a9b;"
+               data-year="8"
+               aria-label="Year 8 Science — Periodic Table and Atomic Structure, Living Systems, Change, Data Science 1">
+              <span class="card-badge">Year 8</span>
+              <div class="card-heading">Year 8 Science</div>
+              <ul class="card-topics" aria-hidden="true">
+                <li>Periodic Table and Atomic Structure</li>
+                <li>Living Systems</li>
+                <li>Change</li>
+                <li>Data Science 1</li>
+              </ul>
+              <span class="card-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+
+          <!-- Year 9 -->
+          <li>
+            <a class="year-card"
+               href="https://irvincisneros-png.github.io/Year-9/"
+               style="--accent: #4b7bc9;"
+               data-year="9"
+               aria-label="Year 9 Science — Diseases, Energy, Environmental Sustainability, Materials">
+              <span class="card-badge">Year 9</span>
+              <div class="card-heading">Year 9 Science</div>
+              <ul class="card-topics" aria-hidden="true">
+                <li>Diseases</li>
+                <li>Energy</li>
+                <li>Environmental Sustainability</li>
+                <li>Materials</li>
+              </ul>
+              <span class="card-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+
+          <!-- Year 10 -->
+          <li>
+            <a class="year-card"
+               href="https://irvincisneros-png.github.io/Year-10-Science/"
+               style="--accent: #7a3a9b;"
+               data-year="10"
+               aria-label="Year 10 Science — Chemical Reactions, Data Science 2, Genetics and Evolutionary Change, Waves and Motion">
+              <span class="card-badge">Year 10</span>
+              <div class="card-heading">Year 10 Science</div>
+              <ul class="card-topics" aria-hidden="true">
+                <li>Chemical Reactions</li>
+                <li>Data Science 2</li>
+                <li>Genetics and Evolutionary Change</li>
+                <li>Waves and Motion</li>
+              </ul>
+              <span class="card-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>NSW Department of Education &mdash; Junior Science &mdash; Stages 4 &amp; 5</p>
+    </footer>
+
+  </div>
+
+  <!-- Last-year memory (vanilla JS, no external deps) -->
+  <script>
+    (function () {
+      var KEY = 'jsci.lastyear';
+      var URLS = {
+        '7':  'https://irvincisneros-png.github.io/Year-7/',
+        '8':  'https://irvincisneros-png.github.io/Year-8-Science/',
+        '9':  'https://irvincisneros-png.github.io/Year-9/',
+        '10': 'https://irvincisneros-png.github.io/Year-10-Science/'
+      };
+
+      // On load: show jump-back banner if a year was saved
+      try {
+        var saved = localStorage.getItem(KEY);
+        if (saved && URLS[saved]) {
+          var banner = document.getElementById('jump-back');
+          banner.innerHTML =
+            'Welcome back! &nbsp;<a href="' + URLS[saved] + '">' +
+            'Jump back into Year ' + saved + ' →</a>';
+          banner.style.display = 'block';
+        }
+      } catch (e) { /* localStorage blocked — silent fallback */ }
+
+      // On card click: save the year to localStorage
+      var cards = document.querySelectorAll('.year-card[data-year]');
+      for (var i = 0; i < cards.length; i++) {
+        cards[i].addEventListener('click', function () {
+          try {
+            localStorage.setItem(KEY, this.getAttribute('data-year'));
+          } catch (e) {}
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
