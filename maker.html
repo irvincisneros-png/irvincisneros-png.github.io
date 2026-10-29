@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light">
+<title>Maker view · Woonona High Learning Hub</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/home.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="mk-head">
+    <a class="back" href="index.html">&larr; Back to the Learning Hub</a>
+    <h1>Maker view</h1>
+    <p class="note">Edit <code>data/sites.js</code> to change statuses. Ticking a next step is saved only in this browser.</p>
+    <div class="counters" id="counters"></div>
+    <div class="toolbar">
+      <label class="sr-only" for="mq">Search sites</label>
+      <input id="mq" type="search" placeholder="Search sites, issues, notes" autocomplete="off">
+      <label>Sort by
+        <select id="msort">
+          <option value="status">Status</option>
+          <option value="updated">Last updated</option>
+          <option value="year">Year</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <h2 class="mk-h2">Board</h2>
+    <p class="mk-sub" id="board-sub"></p>
+    <div class="board" id="board"></div>
+
+    <h2 class="mk-h2">Coverage matrix</h2>
+    <p class="mk-sub">Which sites cover each syllabus focus area. Rows with no simulator or game are marked red. Hover or focus a dot for the title.</p>
+    <div class="legend" id="legend"></div>
+    <div class="mx-wrap"><table class="mx" id="matrix"></table></div>
+
+    <h2 class="mk-h2">Overlaps</h2>
+    <p class="mk-sub">Focus areas with two or more simulators or games. Decide whether each pair is complementary or redundant.</p>
+    <div id="overlaps"></div>
+  </main>
+</div>
+<footer class="foot"><div class="wrap"><p class="disc">Private tracker, not linked from the public pages except the footer. Not an official NSW Department of Education site.</p></div></footer>
+<script src="data/sites.js"></script>
+<script src="assets/maker.js"></script>
+</body>
+</html>
