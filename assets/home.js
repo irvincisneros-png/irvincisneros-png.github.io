@@ -102,9 +102,11 @@
     [7, 8, 9, 10].forEach(function (y) {
       if (state.subject === 'music' || (state.year !== 'all' && +state.year !== y)) return;
       var courseSite = SITES.filter(function (s) { return s.kind === 'course-site' && s.subject === 'science' && s.years.length === 1 && s.years[0] === y; })[0];
+      // a single-year revision site sits once beside the notebook, not in every topic row
+      var yearRev = SITES.filter(function (s) { return s.kind === 'revision' && s.subject === 'science' && s.years.length === 1 && s.years[0] === y && pass(s); });
       var rows = [];
       AREAS.filter(function (a) { return a.year === y; }).forEach(function (a) {
-        var list = SITES.filter(function (s) { return s.kind !== 'course-site' && (s.focus || []).indexOf(a.id) >= 0 && s.focus.length <= 6 && pass(s); });
+        var list = SITES.filter(function (s) { return s.kind !== 'course-site' && yearRev.indexOf(s) < 0 && (s.focus || []).indexOf(a.id) >= 0 && s.focus.length <= 6 && pass(s); });
         if (!list.length && filtered()) return;
         list.forEach(mark);
         rows.push(h('div', { 'class': 'topic' }, [
@@ -119,13 +121,15 @@
       });
       var course = courseSite && pass(courseSite) ? courseSite : null;
       if (course) mark(course);
-      if (!rows.length && !course) return;
+      yearRev.forEach(mark);
+      if (!rows.length && !course && !yearRev.length) return;
       var s = h('section', { 'class': 'section', id: 'year-' + y, style: '--accent:' + YEAR_COL[y], 'aria-labelledby': 'h-y' + y }, [
         h('div', { 'class': 'year-head' }, [
           h('span', { 'class': 'year-num', 'aria-hidden': 'true', text: y }),
           h('div', null, [h('h2', { id: 'h-y' + y, text: 'Year ' + y }), h('p', { text: AREAS.filter(function (a) { return a.year === y; }).length + ' topics, in syllabus order' })])
         ]),
-        course ? h('div', { 'class': 'course-strip' }, [card(course, { wide: true })]) : null
+        course ? h('div', { 'class': 'course-strip' }, [card(course, { wide: true })]) : null,
+        yearRev.length ? h('div', { 'class': 'course-strip' }, yearRev.map(function (r) { return card(r, { wide: true }); })) : null
       ].concat(rows));
       root.appendChild(s);
     });
