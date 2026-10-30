@@ -1618,5 +1618,121 @@ window.SITES = [
     "featured": false,
     "audience": "students",
     "shot": "shots/year8-valid-revision.webp"
+  },
+  {
+    "subject": "science",
+    "live_ok": true,
+    "unpushed_note": null,
+    "id": "year7-yearly-revision",
+    "repo": "year7-yearly-revision",
+    "url": "https://irvincisneros-png.github.io/year7-yearly-revision/",
+    "title": "Year 7 Yearly Exam Revision",
+    "years": [
+      7
+    ],
+    "topics": [
+      "Observing the Universe",
+      "Forces",
+      "Classification & cells",
+      "Solutions & mixtures"
+    ],
+    "kind": "revision",
+    "tagline": "Revise the high-value ideas: recaps, worked examples, practice and model answers.",
+    "description": "Yearly Exam revision for Year 7 Science: the four Year 7 topics, organised by syllabus dot point and weighted toward the ideas that carry the most marks. Each dot point has a short recap, worked examples, original practice questions with model answers, a self-check list and a link to the matching notebook section.",
+    "outcomes": [
+      "Universe 1.1.3-1.5.1",
+      "Forces 2.1.1-2.3.5",
+      "Cells 3.1.1-3.2.9",
+      "Solutions 4.1.1-4.4.6 + investigation skills 1.2.6, 1.2.8"
+    ],
+    "features": [
+      "exam-focus ratings (★★★/★★/★)",
+      "worked examples revealed step by step",
+      "self-marking MCQs",
+      "written questions with model answers",
+      "self-check lists",
+      "links to the notebook",
+      "progress saving",
+      "dark mode",
+      "mobile friendly"
+    ],
+    "teacher_url": null,
+    "last_push": "2026-10-31",
+    "stack": "React 18 + shared Junior Science kit, precompiled JSX (tools/build.js), CI build check",
+    "maker_status": "finished",
+    "public_badge": "ready",
+    "coverage": "4 of 4 topics; every examined dot point has a recap, worked examples, practice and a self-check",
+    "issues": [],
+    "next_steps": [
+      "Update ratings and questions if next year's exam blueprint changes"
+    ],
+    "notes": "Built 2026-10-31. Dot points and weighting taken from the 2026 Yearly Exam blueprint; every question is original and was checked against the real paper before publishing (no exam content in the repo).",
+    "focus": [
+      "y7-universe",
+      "y7-forces",
+      "y7-cells",
+      "y7-solutions"
+    ],
+    "featured": false,
+    "audience": "students",
+    "shot": "shots/year7-yearly-revision.webp"
+  },
+  {
+    "subject": "science",
+    "live_ok": true,
+    "unpushed_note": null,
+    "id": "year10-yearly-revision",
+    "repo": "year10-yearly-revision",
+    "url": "https://irvincisneros-png.github.io/year10-yearly-revision/",
+    "title": "Year 10 Yearly Exam Revision",
+    "years": [
+      10
+    ],
+    "topics": [
+      "Genetics & evolutionary change",
+      "Reactions",
+      "Waves & motion",
+      "Data science"
+    ],
+    "kind": "revision",
+    "tagline": "Revise the high-value ideas: recaps, worked examples, practice and model answers.",
+    "description": "Yearly Exam revision for Year 10 Science: the four Year 10 topics, organised by syllabus dot point and weighted toward the ideas that carry the most marks. Each dot point has a short recap, worked examples, original practice questions with model answers, a self-check list and a link to the matching notebook section.",
+    "outcomes": [
+      "Genetics 5.1.2-5.5.1",
+      "Reactions 6.1.1-6.4.5",
+      "Waves & Motion 7.1.3-7.5.1",
+      "Data Science 8.1.1-8.2.5"
+    ],
+    "features": [
+      "exam-focus ratings (★★★/★★/★)",
+      "worked examples revealed step by step",
+      "self-marking MCQs",
+      "written questions with model answers",
+      "self-check lists",
+      "links to the notebook",
+      "progress saving",
+      "dark mode",
+      "mobile friendly"
+    ],
+    "teacher_url": null,
+    "last_push": "2026-10-31",
+    "stack": "React 18 + shared Junior Science kit, precompiled JSX (tools/build.js), CI build check",
+    "maker_status": "finished",
+    "public_badge": "ready",
+    "coverage": "4 of 4 topics; every examined dot point has a recap, worked examples, practice and a self-check",
+    "issues": [],
+    "next_steps": [
+      "Update ratings and questions if next year's exam blueprint changes"
+    ],
+    "notes": "Built 2026-10-31. Dot points and weighting taken from the 2026 Yearly Exam blueprint; every question is original and was checked against the real paper before publishing (no exam content in the repo).",
+    "focus": [
+      "y10-genetics",
+      "y10-chem",
+      "y10-waves",
+      "y10-data"
+    ],
+    "featured": false,
+    "audience": "students",
+    "shot": "shots/year10-yearly-revision.webp"
   }
 ];
