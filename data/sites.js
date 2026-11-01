@@ -970,6 +970,64 @@ window.SITES = [
     "shot": "shots/deepswell.webp"
   },
   {
+    "id": "tideline",
+    "repo": "tideline",
+    "url": "https://irvincisneros-png.github.io/tideline/",
+    "title": "TideLine",
+    "subject": "science",
+    "years": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "topics": [
+      "Aquatic harvesting",
+      "Sustainable fishing"
+    ],
+    "kind": "game",
+    "tagline": "Gotta catch 'em all… and release the small.",
+    "description": "A cosy top-down fishing game on the Illawarra coast. Fish five sites (Bellambi beach and rocks, Lake Illawarra, Belmore Basin wharf, an offshore reef by boat with a fish finder, and a freshwater river) to complete the 25-species Illawarra Fish Guide. Identify each catch with a dichotomous key, measure it, and decide keep or release using DPIRD size, bag and possession limits. Earn Club credits from citizen-science records, tag-and-release and club comps (never by selling your catch), talk to locals for tips and trades, and finish with an awards night and a commercial co-op post-game with a nets lab. Teacher page maps it to Aquatic Technology Module 2.",
+    "outcomes": [],
+    "features": [
+      "3D",
+      "game",
+      "5 sites",
+      "25 species",
+      "dichotomous key",
+      "catch bar",
+      "character creator",
+      "NPC trades",
+      "teacher page",
+      "logbook CSV export",
+      "touch controls"
+    ],
+    "teacher_url": "https://irvincisneros-png.github.io/tideline/teacher.html",
+    "live_ok": true,
+    "last_push": "2026-11-02",
+    "stack": "vanilla JS ES modules + Three.js r169 (DeepSwell engine), Blender-made cosy models, node:test + Playwright",
+    "maker_status": "needs-polish",
+    "public_badge": "beta",
+    "coverage": "all 5 planned sites, ending and post-game built; 181 unit tests + playtests pass",
+    "issues": [
+      "Sea Country (Ranger Jo) dialogue and cards need AEO/AECG review before classroom use",
+      "Carp 'best practice' wording and 'can't sell your catch' line need a DPIRD check; limits verified 2026-11-01 and change over time",
+      "Not yet tried on a real Chromebook or phone",
+      "River she-oaks still look palm-like from above; fallback (no-model) people look rough"
+    ],
+    "next_steps": [
+      "AEO/AECG review of Sea Country content",
+      "Pilot with an Aquatic Tech class on Chromebooks",
+      "Map teacher page to NESA outcome codes"
+    ],
+    "notes": "Fishing-only spin-off of DeepSwell in the style of 'I Just Wanted to Fish'. Content from tideline-content/species-and-rules.md.",
+    "focus": [],
+    "featured": true,
+    "audience": "students",
+    "extra": "Aquatic Technology 7–10 · Aquatic harvesting",
+    "shot": "shots/tideline.webp"
+  },
+  {
     "id": "deeptime",
     "repo": "deeptime",
     "url": "https://irvincisneros-png.github.io/deeptime/",
