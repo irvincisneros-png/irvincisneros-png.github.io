@@ -908,6 +908,56 @@ window.SITES = [
     "shot": "shots/chordhands.webp"
   },
   {
+    "id": "palm-oracle",
+    "repo": "palm-oracle",
+    "url": "https://irvincisneros-png.github.io/palm-oracle/",
+    "title": "Palm Oracle",
+    "subject": "science",
+    "years": [
+      8
+    ],
+    "topics": [
+      "Data science 1",
+      "Evaluating claims & pseudoscience"
+    ],
+    "kind": "simulator",
+    "tagline": "A webcam palm reader that sounds sure of itself. Can you prove it wrong?",
+    "description": "Students scan their palm with the webcam (or upload a photo, or use a demo hand). The app traces the heart, head and life lines on the device and gives a confident tarot-style reading. Then they test the claim: repeat scans for reliability, a scatter plot of line length vs age for validity (with a sample class dataset), and a pick-your-own-reading Barnum test, ending with a science vs pseudoscience verdict. No image ever leaves the device. Companion one-page worksheet: How to Read a Palm.",
+    "outcomes": [],
+    "features": [
+      "webcam",
+      "hand tracking",
+      "self-hosted",
+      "demo hand / photo fallback",
+      "data table + CSV",
+      "scatter plot + r",
+      "teacher notes"
+    ],
+    "teacher_url": null,
+    "live_ok": true,
+    "last_push": "2026-11-03",
+    "stack": "vanilla ES modules + MediaPipe (vendored)",
+    "maker_status": "needs-polish",
+    "public_badge": "beta",
+    "coverage": "Complete app: scan, reading, 3 investigations, verdict; 49 passing tests",
+    "issues": [
+      "Not yet tested with a real webcam and real palm; crease tracing tuned on synthetic demo palms",
+      "Palm-facing check unproven on real hands (falls back to Capture now)"
+    ],
+    "next_steps": [
+      "Test with a real palm on a school Chromebook and tune line detection",
+      "Link from the Year 8 Data science course page"
+    ],
+    "unpushed_note": null,
+    "notes": "Tests: node --test tests/*.test.js passes 49/49.",
+    "focus": [
+      "y8-data"
+    ],
+    "featured": false,
+    "audience": "students",
+    "shot": "shots/palm-oracle.webp"
+  },
+  {
     "id": "deepswell",
     "repo": "deepswell",
     "url": "https://irvincisneros-png.github.io/deepswell/",
