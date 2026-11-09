@@ -958,6 +958,58 @@ window.SITES = [
     "shot": "shots/palm-oracle.webp"
   },
   {
+    "id": "reflex-lab",
+    "repo": "reflex-lab",
+    "url": "https://irvincisneros-png.github.io/reflex-lab/",
+    "title": "Reflex Lab",
+    "subject": "science",
+    "years": [
+      7,
+      8
+    ],
+    "topics": [
+      "Testing and supporting claims",
+      "Fair tests & data"
+    ],
+    "kind": "game",
+    "tagline": "Do distractions really slow you down? Test it on yourself.",
+    "description": "A reaction-time investigation set in a 3D neuroscience lab. Students pick a claim (dominant hand, sound vs light, distractions, multitasking, deciding, practice), plan a fair test with controlled variables and a prediction, then collect warm-up and ABBA-balanced timed trials. Results show every trial as a dot plot, medians and a pair score, and judge the claim and the prediction separately before students write a justification. XP rewards good science, not speed; ranking up upgrades the lab. Copy/CSV export for the worksheet.",
+    "outcomes": [],
+    "features": [
+      "3D",
+      "game",
+      "self-hosted",
+      "fair test planner",
+      "dot plot + trial order plot",
+      "data table + CSV",
+      "teacher panel"
+    ],
+    "teacher_url": "https://irvincisneros-png.github.io/reflex-lab/?teacher=1",
+    "live_ok": true,
+    "last_push": "2026-11-09",
+    "stack": "vanilla ES modules + three.js r170 (vendored)",
+    "maker_status": "needs-polish",
+    "public_badge": "beta",
+    "coverage": "Complete app: 6 claims, planning gate, timed trials, evidence summary, 3D lab + neural replay; 30 passing tests",
+    "issues": [
+      "Timing not yet tested on a real school Chromebook",
+      "Replay brain hemispheres sit apart",
+      "3D background may load slowly on phones"
+    ],
+    "next_steps": [
+      "Run a real class trial on a Chromebook",
+      "Pair with the Testing and supporting claims worksheet"
+    ],
+    "unpushed_note": null,
+    "notes": "Tests: npm test passes 30/30. Design reviewed adversarially by Codex (docs/SPEC.md v2).",
+    "focus": [
+      "y8-data"
+    ],
+    "featured": false,
+    "audience": "students",
+    "shot": "shots/reflex-lab.webp"
+  },
+  {
     "id": "deepswell",
     "repo": "deepswell",
     "url": "https://irvincisneros-png.github.io/deepswell/",
