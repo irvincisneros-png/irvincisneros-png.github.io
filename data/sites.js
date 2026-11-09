@@ -964,8 +964,7 @@ window.SITES = [
     "title": "Reflex Lab",
     "subject": "science",
     "years": [
-      7,
-      8
+      10
     ],
     "topics": [
       "Testing and supporting claims",
@@ -1003,7 +1002,7 @@ window.SITES = [
     "unpushed_note": null,
     "notes": "Tests: npm test passes 30/30. Design reviewed adversarially by Codex (docs/SPEC.md v2).",
     "focus": [
-      "y8-data"
+      "y10-data"
     ],
     "featured": false,
     "audience": "students",
