@@ -958,6 +958,57 @@ window.SITES = [
     "shot": "shots/palm-oracle.webp"
   },
   {
+    "id": "shark-watch",
+    "repo": "shark-watch",
+    "url": "https://irvincisneros-png.github.io/shark-watch/",
+    "title": "Tagged! Bondi to Kiama",
+    "subject": "science",
+    "years": [
+      8
+    ],
+    "topics": [
+      "Data science 1",
+      "Data science is interdisciplinary (8.1.3)"
+    ],
+    "kind": "game",
+    "tagline": "Swim south as a tagged white shark. Every listening station you pass becomes a row of real data.",
+    "description": "A side-scrolling migration game past six real NSW SharkSmart listening stations (Bondi, Cronulla, Stanwell Park, Wollongong, Shellharbour, Kiama). Students eat Australian salmon, dodge fishing line, plastic, shark nets and ship propellers, and use real-biology power-ups (East Australian Current, electro-sense, scent, bait balls). Each station they swim through pings their tag. The ending turns the run into a detection dataset with gaps, compares it with a real NSW DPI white shark's detections from the IMOS Animal Tracking Database, and asks systems, statistics and science reflection questions.",
+    "outcomes": [],
+    "features": [
+      "3D",
+      "game",
+      "self-hosted",
+      "real IMOS data",
+      "keyboard / touch / gamepad",
+      "fact cards",
+      "teacher notes in README"
+    ],
+    "teacher_url": null,
+    "live_ok": true,
+    "last_push": "2026-11-11",
+    "stack": "vanilla ES modules + three.js (vendored)",
+    "maker_status": "needs-polish",
+    "public_badge": "beta",
+    "coverage": "Complete game: tag-on intro, 5 legs, hazards and power-ups, data ending with real white shark A69-9001-61077, credits; 31 unit tests + 14-check flow test",
+    "issues": [
+      "Not yet tested on a real school Chromebook or phone",
+      "On phones the HUD hides most of the coastline/landmark strip",
+      "Pacing and score thresholds not yet playtested by students"
+    ],
+    "next_steps": [
+      "Run a class trial on Chromebooks",
+      "Build the Fake or Fin? data-cleaning mini-game and the four Shark Watch stations (docs/specs)"
+    ],
+    "unpushed_note": null,
+    "notes": "Tests: npm test 31/31; tests/playtest/flow.mjs 14/14 against the live URL. Spec: shark-watch/docs/specs/.",
+    "focus": [
+      "y8-data"
+    ],
+    "featured": false,
+    "audience": "students",
+    "shot": "shots/shark-watch.webp"
+  },
+  {
     "id": "reflex-lab",
     "repo": "reflex-lab",
     "url": "https://irvincisneros-png.github.io/reflex-lab/",
