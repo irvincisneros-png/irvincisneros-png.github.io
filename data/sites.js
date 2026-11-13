@@ -1944,5 +1944,63 @@ window.SITES = [
     "featured": false,
     "audience": "students",
     "shot": "shots/year10-yearly-revision.webp"
+  },
+  {
+    "id": "magnitude",
+    "repo": "magnitude",
+    "url": "https://irvincisneros-png.github.io/magnitude/",
+    "title": "Magnitude",
+    "subject": "science",
+    "years": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "topics": [
+      "Scale of the universe",
+      "Atoms, cells, the Solar System and galaxies",
+      "Scientific models (8.2.2, 8.2.3)"
+    ],
+    "kind": "simulator",
+    "tagline": "Zoom from the smallest thing physics can describe to the edge of the observable universe, in one continuous 3D dive.",
+    "description": "A seamless 3D zoom through 62 powers of ten with 12 hand-built scenes: Planck scale, proton, carbon nucleus, carbon atom, DNA (real crystal structure), skin cell, a person on the Illawarra coast, Earth (NASA imagery), the Sun, the Solar System at true distances, the Milky Way and the cosmic web out to the oldest light. Every scene carries a Measured / Modelled / Speculative badge and a How do we know? note. Includes a compare tray, guided tours, scavenger-hunt missions, a time and light layer, and a teacher page.",
+    "outcomes": [],
+    "features": [
+      "3D",
+      "simulator",
+      "real NASA + PDB data",
+      "tours",
+      "missions",
+      "compare tray",
+      "teacher page",
+      "keyboard / touch"
+    ],
+    "teacher_url": "https://irvincisneros-png.github.io/magnitude/teacher.html",
+    "live_ok": true,
+    "last_push": "2026-11-13",
+    "stack": "Vite + TypeScript + three.js; GitHub Actions deploy",
+    "maker_status": "needs-polish",
+    "public_badge": "beta",
+    "coverage": "Slice 1: zoom engine, 12 hero landmarks, 58 ruler markers, compare tray, 3 tours, 8 missions, time & light, ambient audio, teacher view; 70 unit tests",
+    "issues": [
+      "Not yet tested on a real school Chromebook or phone",
+      "Frame rate on the high tier unmeasured on real hardware",
+      "Teacher view: Planck scale and Milky Way have no mapped outcome; other mappings need a teacher check"
+    ],
+    "next_steps": [
+      "Class trial on school laptops",
+      "Build the remaining ~28 landmark scenes (virus, Moon, Jupiter, nebula, Andromeda and so on)"
+    ],
+    "unpushed_note": null,
+    "notes": "Spec: magnitude/docs/specs/2026-11-13-magnitude-design.md. Builder brief: magnitude/docs/LANDMARK_BRIEF.md.",
+    "focus": [
+      "y7-universe",
+      "y7-cells",
+      "y8-periodic"
+    ],
+    "featured": false,
+    "audience": "students",
+    "shot": "shots/magnitude.webp"
   }
 ];
