@@ -1964,12 +1964,12 @@ window.SITES = [
     ],
     "kind": "simulator",
     "tagline": "Zoom from the smallest thing physics can describe to the edge of the observable universe, in one continuous 3D dive.",
-    "description": "A seamless 3D zoom through 62 powers of ten with 12 hand-built scenes: Planck scale, proton, carbon nucleus, carbon atom, DNA (real crystal structure), skin cell, a person on the Illawarra coast, Earth (NASA imagery), the Sun, the Solar System at true distances, the Milky Way and the cosmic web out to the oldest light. Every scene carries a Measured / Modelled / Speculative badge and a How do we know? note. Includes a compare tray, guided tours, scavenger-hunt missions, a time and light layer, and a teacher page.",
+    "description": "A seamless 3D zoom through 62 powers of ten with 20 hand-built scenes: Planck scale, proton, carbon nucleus, carbon atom, DNA (real crystal structure), bacteriophage, E. coli, skin cell, a grain of sand, an ant, a person standing on Woonona Beach (built from real map and elevation data), Earth (NASA imagery), the Earth-Moon system, the Sun, Betelgeuse, the Solar System at true distances, the Orion Nebula, Omega Centauri, the Milky Way and the cosmic web out to the oldest light. Every scene carries a Measured / Modelled / Speculative badge and a How do we know? note. Includes a compare tray, guided tours, scavenger-hunt missions, a time and light layer, and a teacher page.",
     "outcomes": [],
     "features": [
       "3D",
       "simulator",
-      "real NASA + PDB data",
+      "real NASA, PDB + OpenStreetMap data",
       "tours",
       "missions",
       "compare tray",
@@ -1982,7 +1982,7 @@ window.SITES = [
     "stack": "Vite + TypeScript + three.js; GitHub Actions deploy",
     "maker_status": "needs-polish",
     "public_badge": "beta",
-    "coverage": "Slice 1: zoom engine, 12 hero landmarks, 58 ruler markers, compare tray, 3 tours, 8 missions, time & light, ambient audio, teacher view; 70 unit tests",
+    "coverage": "Zoom engine, 20 landmark scenes, ruler markers, compare tray, tours, missions, time & light, ambient audio, teacher view; human scale is the real Woonona Beach",
     "issues": [
       "Not yet tested on a real school Chromebook or phone",
       "Frame rate on the high tier unmeasured on real hardware",
@@ -1990,7 +1990,7 @@ window.SITES = [
     ],
     "next_steps": [
       "Class trial on school laptops",
-      "Build the remaining ~28 landmark scenes (virus, Moon, Jupiter, nebula, Andromeda and so on)"
+      "Build the remaining ~20 landmark scenes toward a roster of about 40"
     ],
     "unpushed_note": null,
     "notes": "Spec: magnitude/docs/specs/2026-11-13-magnitude-design.md. Builder brief: magnitude/docs/LANDMARK_BRIEF.md.",
