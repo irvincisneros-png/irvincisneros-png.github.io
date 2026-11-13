@@ -1009,6 +1009,58 @@ window.SITES = [
     "shot": "shots/shark-watch.webp"
   },
   {
+    "id": "fur-and-fang",
+    "repo": "fur-and-fang",
+    "url": "https://irvincisneros-png.github.io/fur-and-fang/",
+    "title": "Fur & Fang",
+    "subject": "science",
+    "years": [
+      10
+    ],
+    "topics": [
+      "Genetics & evolution",
+      "Natural selection"
+    ],
+    "kind": "simulator",
+    "tagline": "Keep a warren of rabbits alive for 15 minutes while winters, droughts and foxes reshape the valley.",
+    "description": "A 3D natural-selection simulator. Rabbits carry three genes with real trade-offs (fur camouflage, ear length and Allen's rule, teeth vs tough food). Explore mode is a teacher sandbox with snow, temperature, food and fox controls, dominance pickers, genotype view, pedigrees, a bottleneck button, Predict-Observe-Explain prompts and CSV export. Survive 15:00 makes students the valley ranger: they cannot choose mutations, so they read the forecast and use gene flow, clover, shelter and fences so the variation exists before the pressure arrives. A guided tutorial and an end-of-run report with allele charts, causes of death and reflection questions are included.",
+    "outcomes": [],
+    "features": [
+      "3D",
+      "sim",
+      "game",
+      "tutorial",
+      "free camera (WASD)",
+      "graphs + CSV export",
+      "seed codes",
+      "reflection questions"
+    ],
+    "teacher_url": null,
+    "live_ok": true,
+    "last_push": "2026-11-13",
+    "stack": "vanilla ES modules + three.js (vendored)",
+    "maker_status": "needs-polish",
+    "public_badge": "beta",
+    "coverage": "Explore + Survive 15:00 + 8-step tutorial; Codex playtest findings fixed; balance: do-nothing 15% survive, forecast-only planner 97.5% (40 seeds); 35 unit tests",
+    "issues": [
+      "Not yet played through by hand or tested on a Chromebook/touch device",
+      "Real frame rate unmeasured",
+      "Big text + tutorial card may overlap the graph at 1280x720"
+    ],
+    "next_steps": [
+      "Class trial on Chromebooks",
+      "Speciation/islands extension (ideas pending)"
+    ],
+    "unpushed_note": null,
+    "notes": "Tests: npm test 35; npm run balance for the 40+80 seed sweep. Spec: fur-and-fang/docs/SPEC.md.",
+    "focus": [
+      "y10-genetics"
+    ],
+    "featured": false,
+    "audience": "students",
+    "shot": "shots/fur-and-fang.webp"
+  },
+  {
     "id": "reflex-lab",
     "repo": "reflex-lab",
     "url": "https://irvincisneros-png.github.io/reflex-lab/",
