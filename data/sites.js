@@ -2054,5 +2054,68 @@ window.SITES = [
     "featured": false,
     "audience": "students",
     "shot": "shots/magnitude.webp"
+  },
+  {
+    "id": "live-wire",
+    "repo": "live-wire",
+    "url": "https://irvincisneros-png.github.io/live-wire/",
+    "title": "Live Wire",
+    "subject": "science",
+    "years": [
+      9
+    ],
+    "topics": [
+      "Energy",
+      "Electric circuits",
+      "Ohm's law",
+      "Efficiency and energy sources"
+    ],
+    "kind": "simulator",
+    "tagline": "Build circuits in 3D, see the charges move, then prove it as an apprentice electrician.",
+    "description": "A Year 9 electricity simulator in two parts. Learn: eight stations with a guided tour, free play and short checks, starting with a zoomed-in picture of what electricity is (charge, current, voltage, resistance, energy and power each shown as one visible thing), then a realistic 3D circuit bench with x-ray charge flow and a circuit diagram that draws itself, series and parallel with meters, an Ohm's law investigation with a live graph, a kitchen for power, energy and Energy Rating labels, lamp efficiency with a thermal camera, and cutaway power stations. The Job: five scored, no-hint jobs at a 12 V training house (fault call-out, install a new power point, the tripping power board, energy audit, solar and battery) with a printable job sheet. Teacher page has the syllabus map, lesson sequence, scoring and model limits.",
+    "outcomes": [
+      "Y9 Energy 1.1.1-1.3.6, 1.4.1 (SC5-EGY-01)"
+    ],
+    "features": [
+      "3D",
+      "simulator",
+      "circuit builder",
+      "x-ray charge flow",
+      "live circuit diagram",
+      "8 stations",
+      "5 summative jobs",
+      "printable job sheet",
+      "teacher page",
+      "quality tiers"
+    ],
+    "teacher_url": "https://irvincisneros-png.github.io/live-wire/teacher.html",
+    "live_ok": true,
+    "last_push": "2026-11-15",
+    "stack": "Vite + TypeScript + three.js, Vitest (392 tests), GitHub Actions deploy",
+    "maker_status": "needs-polish",
+    "public_badge": "beta",
+    "coverage": "All 8 stations and all 5 jobs built; covers 13 of 16 Energy dot points (not 1.4.2, 1.4.3, 1.6.1)",
+    "issues": [
+      "Built in one overnight session; never used by a class",
+      "Not tested on a real school Chromebook, phone or touch screen",
+      "Each station's checks were not all clicked through by hand (guided tours and all five jobs were driven end to end)",
+      "Safety wording for The Job has not been checked by a qualified electrician",
+      "Source and appliance figures are typical values cited from memory (docs/DATA-SOURCES.md) and need a teacher check",
+      "No 2D fallback if WebGL is unavailable"
+    ],
+    "next_steps": [
+      "Owner play-through and class trial",
+      "Test on school laptops and phones",
+      "Check data figures against CSIRO GenCost / AEMO / Energy Rating",
+      "Polish pass on job scenes 3-5 and phone layouts"
+    ],
+    "unpushed_note": null,
+    "notes": "Spec: live-wire/docs/specs/2026-11-15-live-wire-design.md. Codex reviews in live-wire/docs/review/.",
+    "focus": [
+      "y9-energy"
+    ],
+    "featured": false,
+    "audience": "students",
+    "shot": "shots/live-wire.webp"
   }
 ];
