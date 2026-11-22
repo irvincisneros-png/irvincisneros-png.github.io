@@ -5,7 +5,7 @@
     ['finished', 'Finished'], ['needs-polish', 'Needs polish'], ['in-progress', 'In progress'], ['early', 'Early'], ['stale', 'Stale']
   ];
   var ORDER = {}; STATUSES.forEach(function (s, i) { ORDER[s[0]] = i; });
-  var YEAR_COL = { 7: 'var(--y7)', 8: 'var(--y8)', 9: '#3a67b0', 10: 'var(--y10)' };
+  var YEAR_COL = { 7: 'var(--y7)', 8: 'var(--y8)', 9: 'var(--y9)', 10: 'var(--y10)' };
   var SIM = { simulator: 1, game: 1, tool: 1 };
   var TODAY = new Date();
 
@@ -92,9 +92,15 @@
     var root = $('board'); root.innerHTML = '';
     STATUSES.forEach(function (st) {
       var items = list.filter(function (s) { return s.maker_status === st[0]; });
-      var c = h('section', { 'class': 'col', style: '--c:' + col(st[0]), 'aria-label': st[1] }, [h('h3', null, [st[1], h('span', { text: items.length })])]);
-      if (!items.length) c.appendChild(h('p', { 'class': 'none', text: 'Nothing here' }));
-      items.forEach(function (s) { c.appendChild(mcard(s)); });
+      // on phones, long columns start collapsed so the page isn't kilometres long
+      var collapse = window.innerWidth < 760 && items.length > 3 && !q;
+      var tg = h('button', { type: 'button', 'class': 'col-tg', 'aria-expanded': String(!collapse) }, [st[1], h('span', { text: items.length })]);
+      var bodyEl = h('div', { 'class': 'col-body' });
+      bodyEl.hidden = collapse;
+      tg.addEventListener('click', function () { var o = tg.getAttribute('aria-expanded') === 'true'; tg.setAttribute('aria-expanded', String(!o)); bodyEl.hidden = o; });
+      var c = h('section', { 'class': 'col', style: '--c:' + col(st[0]), 'aria-label': st[1] }, [h('h3', null, [tg]), bodyEl]);
+      if (!items.length) bodyEl.appendChild(h('p', { 'class': 'none', text: 'Nothing here' }));
+      items.forEach(function (s) { bodyEl.appendChild(mcard(s)); });
       root.appendChild(c);
     });
   }
@@ -130,7 +136,7 @@
       if (sims.length < 2) return; n++;
       root.appendChild(h('div', { 'class': 'overlap' }, [
         h('b', { text: 'Year ' + a.year + ': ' + a.name }),
-        h('p', { text: sims.map(function (s) { return s.title; }).join(' + ') + '. Keep both, merge, or position one as the quick version?' })
+        h('p', { text: sims.map(function (s) { return s.title; }).join(' + ') + (sims.length > 2 ? '. Keep them all, merge some, or position one as the quick version?' : '. Keep both, merge, or position one as the quick version?') })
       ]));
     });
     if (!n) root.appendChild(h('p', { 'class': 'mk-sub', text: 'No overlaps found.' }));

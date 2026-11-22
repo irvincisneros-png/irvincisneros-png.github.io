@@ -21,7 +21,7 @@ There's no dark mode requirement, but it must not break in dark mode: set an exp
 
 ## index.html (public)
 1. **Header/hero**: title "Woonona High Learning Hub", subtitle "Interactive science and music for Years 7–10: simulators, games and self-paced notebooks." There's a search box that filters by title, tagline, topics and outcomes. A row of big "Find your class" buttons (Year 7, Year 8, Year 9, Year 10, Music) jumps to or filters that section and remembers the last choice in localStorage. Wrap localStorage in try/catch. If a last choice exists, show a small "Welcome back — jump to Year N" banner, as the old hub did.
-2. **Filter bar** (sticky on desktop): a Year chip group (All/7/8/9/10), a Subject chip group (All/Science/Music) and a Type chip group (All, Simulators & games, Notebooks & revision, Teacher resources). Filters combine with search. Show a live count, e.g. "Showing 12 of 23". The URL hash mirrors the filters (`#year=8&subject=science`) so teachers can share a filtered link.
+2. **Filter bar** (sticky on desktop): a Year chip group (All/7/8/9/10), a Subject chip group (All/Science/Music) and a Type chip group (All, Simulators & games, Notebooks & revision, Teacher resources). Filters combine with search. Show a live count, e.g. "Showing 12 of <total>". The URL hash mirrors the filters (`#year=8&subject=science`) so teachers can share a filtered link.
 3. **Featured**: a horizontal row of the `featured: true` sites, with large cards.
 4. **By year**: one section per year (7, 8, 9, 10). Inside, list that year's FOCUS_AREAS as topic rows in syllabus order. Each topic row has a topic heading and a "Notebook" link to `focus.course_url`, then a card strip of every site whose `focus` includes that topic, excluding the year's course-site entry itself. A site appears under every topic it covers, so Science Defender is better handled separately: list sites with more than 6 focus areas once, in an "All-year revision" strip at the bottom, not in every row. If a topic has no simulator, show a dashed "Simulator coming soon" placeholder tile.
 5. **Music** section: the subject "music" sites.
@@ -44,7 +44,7 @@ There's no dark mode requirement, but it must not break in dark mode: set an exp
 - Note at top: "Edit `data/sites.js` to change statuses."
 
 ## Done when
-- Both pages render with no console errors, all 23 sites appear and every link resolves to `url`.
+- Both pages render with no console errors, all sites in `data/sites.js` appear and every link resolves to `url`.
 - Filters, search and hash sharing work.
 - Pages look good at 375 px and 1280 px.
 - `node --check assets/home.js` passes.

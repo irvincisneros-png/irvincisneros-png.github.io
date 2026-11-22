@@ -25,17 +25,17 @@
     <form class="search" role="search" onsubmit="return false">
       <label class="sr-only" for="q">Search sites by title, topic or outcome</label>
       <svg class="mag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-      <input id="q" type="search" placeholder="Search by title, topic or outcome (e.g. cells, 3.1.1)" autocomplete="off" enterkeyhint="search">
+      <input id="q" type="search" placeholder="Search topics or outcomes" autocomplete="off" enterkeyhint="search">
       <button class="clear" id="qclear" type="button" aria-label="Clear search" hidden>&times;</button>
     </form>
 
     <div class="classes">
       <p class="label" id="classlabel">Find your class</p>
       <div class="class-row" role="group" aria-labelledby="classlabel">
-        <button class="class-btn" type="button" data-class="7" style="--accent:var(--y7)" aria-pressed="false">Year 7<small>Stage 4</small></button>
-        <button class="class-btn" type="button" data-class="8" style="--accent:var(--y8)" aria-pressed="false">Year 8<small>Stage 4</small></button>
-        <button class="class-btn" type="button" data-class="9" style="--accent:#3a67b0" aria-pressed="false">Year 9<small>Stage 5</small></button>
-        <button class="class-btn" type="button" data-class="10" style="--accent:var(--y10)" aria-pressed="false">Year 10<small>Stage 5</small></button>
+        <button class="class-btn" type="button" data-class="7" style="--accent:var(--y7)" aria-pressed="false"><span class="yw">Year </span>7<small>Stage 4</small></button>
+        <button class="class-btn" type="button" data-class="8" style="--accent:var(--y8)" aria-pressed="false"><span class="yw">Year </span>8<small>Stage 4</small></button>
+        <button class="class-btn" type="button" data-class="9" style="--accent:var(--y9)" aria-pressed="false"><span class="yw">Year </span>9<small>Stage 5</small></button>
+        <button class="class-btn" type="button" data-class="10" style="--accent:var(--y10)" aria-pressed="false"><span class="yw">Year </span>10<small>Stage 5</small></button>
         <button class="class-btn" type="button" data-class="music" style="--accent:var(--music)" aria-pressed="false">Music<small>Instruments &amp; theory</small></button>
       </div>
     </div>
@@ -49,8 +49,6 @@
 
 <div class="filters" id="filters">
   <div class="wrap filter-inner">
-    <div class="fgroup" role="group" aria-label="Year" data-group="year"><span class="flabel">Year</span></div>
-    <div class="fgroup" role="group" aria-label="Subject" data-group="subject"><span class="flabel">Subject</span></div>
     <div class="fgroup" role="group" aria-label="Type" data-group="type"><span class="flabel">Type</span></div>
     <p class="count" id="count" aria-live="polite"></p>
     <button class="reset" id="reset" type="button" hidden>Clear filters</button>

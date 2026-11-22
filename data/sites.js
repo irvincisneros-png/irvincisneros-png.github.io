@@ -34,13 +34,13 @@ window.FOCUS_AREAS = [
   {
     "id": "y8-periodic",
     "year": 8,
-    "name": "Periodic table & atoms",
+    "name": "Periodic table & atomic structure",
     "course_url": "https://irvincisneros-png.github.io/Year-8-Science/periodic-table/"
   },
   {
     "id": "y8-change",
     "year": 8,
-    "name": "Change (energy & Earth)",
+    "name": "Change",
     "course_url": "https://irvincisneros-png.github.io/Year-8-Science/change/"
   },
   {
@@ -52,13 +52,13 @@ window.FOCUS_AREAS = [
   {
     "id": "y9-energy",
     "year": 9,
-    "name": "Energy & electricity",
+    "name": "Energy",
     "course_url": "https://irvincisneros-png.github.io/Year-9/energy/"
   },
   {
     "id": "y9-diseases",
     "year": 9,
-    "name": "Diseases & immunity",
+    "name": "Disease",
     "course_url": "https://irvincisneros-png.github.io/Year-9/diseases/"
   },
   {
@@ -82,7 +82,7 @@ window.FOCUS_AREAS = [
   {
     "id": "y10-chem",
     "year": 10,
-    "name": "Chemical reactions",
+    "name": "Reactions",
     "course_url": "https://irvincisneros-png.github.io/Year-10-Science/chemical-reactions/"
   },
   {
@@ -112,7 +112,7 @@ window.SITES = [
     ],
     "kind": "game",
     "tagline": "Short visual mini-games: sort, spot, zoom and build your way through cells.",
-    "description": "Visual mini-games for the NSW Year 7 Cells and Classification topic, one per syllabus dot point. The LIVE site currently releases only 3 games (3.1.1 MRS GREN, 3.1.2 classification sort, 3.1.3 kangaroo taxonomy); all other outcomes show as TBA. Games are lesson companions with no accounts, grades or tracking.",
+    "description": "Visual mini-games for the Year 7 Cells and Classification topic, one per syllabus dot point. Sort, spot, zoom and build your way through MRS GREN, classification and kangaroo taxonomy, with more games being added. Lesson companions with no accounts needed.",
     "outcomes": [
       "3.1.1",
       "3.1.2",
@@ -171,7 +171,7 @@ window.SITES = [
     ],
     "kind": "simulator",
     "tagline": "3D playgrounds for states, density, solutions, separation and water pollution.",
-    "description": "Interactive 3D simulators covering all 19 supplied Year 7 Term 4 matter outcomes (4.1.x-4.5.1): water cycle, heating curves, density, solubility, particle models, separation techniques (including yandying) and pollution clean-up. A syllabus menu launches each lesson; includes a 2D fallback when WebGL is unavailable.",
+    "description": "Interactive 3D simulators covering all 19 Year 7 Solutions and Mixtures outcomes (4.1.1-4.5.1): water cycle, heating curves, density, solubility, particle models, separation techniques (including yandying) and pollution clean-up. A syllabus menu launches each lesson; a 2D version is used when WebGL is unavailable.",
     "outcomes": [
       "4.1.1",
       "4.1.2",
@@ -198,14 +198,13 @@ window.SITES = [
       "virtual investigations",
       "data tables & graphs",
       "2D fallback",
-      "offline (no external assets)",
-      "Playwright tests"
+      "works offline"
     ],
     "last_push": "2026-10-23",
     "stack": "TypeScript + React + Vite + Three.js",
     "maker_status": "needs-polish",
     "public_badge": "ready",
-    "coverage": "all 19 Y7 Term 4 matter outcomes have a working lesson route",
+    "coverage": "all 19 Year 7 Solutions and Mixtures outcomes have a working lesson route",
     "issues": [
       "Duplicates MixLab (Y7 states/density/solutions/mixtures/water) - two products for the same Term 4 unit",
       "Docs/PLAN.md still says 'other Term 4 topics remain future work' though OUTCOME_COVERAGE claims all 19 built - docs inconsistent",
@@ -246,17 +245,17 @@ window.SITES = [
       10
     ],
     "topics": [
-      "Genetics & evolutionary change",
-      "Chemical reactions",
+      "Genetics & evolution",
+      "Reactions",
       "Waves & motion",
       "Data science 2"
     ],
     "kind": "course-site",
     "tagline": "Four Year 10 topics as interactive notebooks, from DNA to waves.",
-    "description": "Self-paced interactive notebook for all four Stage 5 Year 10 topics: Genetics and Evolutionary Change, Chemical Reactions, Waves and Motion and Data Science 2. Each has sections, embedded interactives (Punnett tool, equation balancer, graphing/stats tools), questions, glossary and end-of-topic review. Use as homework or revision alongside the Waves & Motion Studio sim.",
+    "description": "Self-paced interactive notebook for all four Stage 5 Year 10 topics: Genetics and Evolution, Reactions, Waves and Motion and Data Science 2. Each has sections, embedded interactives (Punnett tool, equation balancer, graphing/stats tools), questions, glossary and end-of-topic review. Use as homework or revision alongside the WaveMotion Studio simulator.",
     "outcomes": [
       "Genetics & Evolution 5.1.1-5.5.1 (17 points)",
-      "Chemical Reactions 6.1.1-6.5.1 (19 points)",
+      "Reactions 6.1.1-6.5.1 (19 points)",
       "Waves and Motion 7.1.1-7.5.1 (24 points)",
       "Data Science 2 8.1.1-8.4.1 (19 points)"
     ],
@@ -284,12 +283,12 @@ window.SITES = [
       "Content and interactives were generated in bulk and have not had a documented teacher science-accuracy review (Year 10 genetics needed a correction pass in Oct 2026)",
       "Waves & Motion notebook overlaps the much deeper WaveMotion Studio flagship; nothing links the two",
       "Waves & Motion hub points skip 7.4.3 (list goes 7.4.2 then 7.4.4): check whether a section is missing or just renumbered",
-      "Chemical Reactions has the fewest interactives (7) for the largest abstract load; equation balancing is by typed inputs",
+      "Reactions has the fewest interactives (7) for the largest abstract load; equation balancing is by typed inputs",
       "Only the genetics topic has had a science-error fix (Oct 2026); the other three remain unreviewed"
     ],
     "next_steps": [
       "Review the FLAGGED rows in docs/AUDIT-2026-10-29.md",
-      "Run the same science-error review the genetics topic got over Chemical Reactions, Waves & Motion and Data Science 2",
+      "Run the same science-error review the genetics topic got over Reactions, Waves & Motion and Data Science 2",
       "Link Waves & Motion to year10-waves-motion-studio and decide which is primary",
       "Check the missing 7.4.3 dot point",
       "Add a teacher guide and answer keys",
@@ -329,9 +328,9 @@ window.SITES = [
     "description": "Self-paced interactive notebook for all four Stage 4 Year 7 topics: Observing the Universe, Forces, Cells and Classification, and Solutions and Mixtures. Each topic is a sectioned reading with embedded 2D interactives, multiple-choice and written questions, glossary and end-of-topic review; suited to homework, relief lessons or revision.",
     "outcomes": [
       "Observing the Universe 1.1.1-1.5.1 (19 points)",
+      "Forces 2.1.1–2.3.5",
       "Cells and Classification 3.1.1-3.3.1 (19 points)",
-      "Solutions and Mixtures 4.1.1-4.5.1 (19 points)",
-      "Forces (bundled page; points not enumerated)"
+      "Solutions and Mixtures 4.1.1-4.5.1 (19 points)"
     ],
     "features": [
       "works offline after load",
@@ -392,8 +391,8 @@ window.SITES = [
     ],
     "topics": [
       "Living systems",
-      "Atoms & periodic table",
-      "Change (energy, reactions, geological)",
+      "Periodic table & atomic structure",
+      "Change",
       "Data science 1"
     ],
     "kind": "course-site",
@@ -463,17 +462,17 @@ window.SITES = [
       9
     ],
     "topics": [
-      "Energy & electricity",
-      "Disease & immunity",
+      "Energy",
+      "Disease",
       "Materials",
       "Environmental sustainability"
     ],
     "kind": "course-site",
     "tagline": "Four Year 9 topics as interactive notebooks, from circuits to climate.",
-    "description": "Self-paced interactive notebook for all four Stage 5 Year 9 topics: Energy, Diseases, Materials and Environmental Sustainability. Diseases is its own app (4 sub-topics, 11 interactives such as spread simulation, herd immunity and vaccine response, plus a PDF booklet); the others use the shared sectioned-notebook format.",
+    "description": "Self-paced interactive notebook for all four Stage 5 Year 9 topics: Energy, Disease, Materials and Environmental Sustainability. Disease is its own app (4 sub-topics, 11 interactives such as spread simulation, herd immunity and vaccine response, plus a PDF booklet); the others use the shared sectioned-notebook format.",
     "outcomes": [
       "Energy 1.1.1-1.6.1 (16 points)",
-      "Diseases 2.1.1-2.4.1 (17 points)",
+      "Disease 2.1.1-2.4.1 (17 points)",
       "Materials 3.1.1-3.5.1 (23 points)",
       "Environmental Sustainability 4.1.1-4.5.1 (18 points)"
     ],
@@ -542,7 +541,7 @@ window.SITES = [
     ],
     "kind": "revision",
     "tagline": "Listen, answer and see which skill band you are in.",
-    "description": "A 15-question listening quiz (5 each of high-same-low, rhythm dictation and tempo/dynamics) built with Web Audio so it works on locked-down Chromebooks. Results are scored into the Year 8 report bands and posted to the teacher's Google Sheet via an Apps Script web app, with a backup code and CSV download if the network blocks it. Set as a Google Classroom assignment with the live link.",
+    "description": "A 15-question listening quiz (5 each of high-same-low pitch, rhythm dictation and tempo/dynamics) built with Web Audio so it works on locked-down Chromebooks. Students finish with a skill band and a backup code to hand to their teacher. Suited to Year 8 music classes and can be set as a class task using the live link.",
     "outcomes": [
       "MU4-LIS-01"
     ],
@@ -550,36 +549,32 @@ window.SITES = [
       "quiz",
       "synthesised audio",
       "rhythm notation",
-      "teacher decode page",
-      "Google Sheet results",
-      "backup code + CSV",
-      "works on Chromebook",
-      "729 logic checks"
+      "skill band result",
+      "backup result code",
+      "works on Chromebook"
     ],
     "teacher_url": "https://irvincisneros-png.github.io/aural-skills-quiz/?mode=teacher",
     "live_ok": true,
     "last_push": "2026-05-19",
-    "stack": "single-file vanilla JS + Web Audio + Google Apps Script",
+    "stack": "single-file vanilla JS + Web Audio",
     "maker_status": "finished",
     "public_badge": "ready",
     "coverage": "1 quiz with 3 skill strands (15 questions per attempt); no other year groups or strands yet",
     "issues": [
-      "Google Sheet backend: the Apps Script endpoint is referenced in index.html (CONFIG.scriptUrl) and responds 200 'receiver is running' to a GET, so the receiver is alive; submissions use no-cors so the page can never confirm a row was written, and I did not POST a test row (read-only audit)",
-      "The endpoint URL is public in the repo, so anyone could post junk rows; the sheet is the real check and student names/class codes go to a personal Google Sheet outside the school system (privacy consideration to confirm with the school)",
-      "Per memory notes, two human-only checks were never confirmed: eyeballing/listening to the new sixteenth-note rhythms on a phone/Chromebook, and creating the Google Classroom assignment",
-      "Hard-coded class list (8MUS1-8MUS7) and quizId 'Y8-Aural' need editing in the HTML each term",
-      "Report-band comments live in code, so a change in report wording means a code edit",
-      "Teacher page is only a code decoder; no in-site results view or per-class summary"
+      "Rhythm items (including the sixteenth-note patterns) still need a listen on a phone and on Chromebook speakers",
+      "The class list and quiz ID are set in the page and need editing each term",
+      "Report-band comments live in the code, so changing the wording means a code edit",
+      "Teacher page is only a code decoder; there is no per-class summary"
     ],
     "next_steps": [
-      "Open the Google Sheet and confirm recent rows appear; run one full attempt on a school Chromebook and confirm the row lands",
-      "Listen to the rhythm items on Chromebook speakers and phone to check clarity and the easy-to-hard ordering",
-      "Make sure the Classroom assignment exists and uses the live URL",
+      "Run one full attempt on a school Chromebook and check the result flow end to end",
+      "Listen to the rhythm items on Chromebook speakers and a phone to check clarity and the easy-to-hard ordering",
+      "Check the class task uses the live link",
       "Consider a Year 7 version and a composition-reflection strand reusing the same engine",
-      "Rotate quizId and class list each term; add a 'Back to home' link"
+      "Update the class list and quiz ID each term; add a \"Back to home\" link"
     ],
     "unpushed_note": null,
-    "notes": "Local clone did not exist; audited GitHub main (single commit). Test harness 'node test-logic.mjs' passes 729/729.",
+    "notes": "Single-page app with its logic covered by automated checks.",
     "focus": [],
     "featured": false,
     "audience": "students",
@@ -670,8 +665,7 @@ window.SITES = [
       "tutorial",
       "field guide",
       "audio",
-      "local saves",
-      "mobile checked"
+      "local saves"
     ],
     "last_push": "2026-09-09",
     "stack": "TypeScript + React + Vite + Three.js",
@@ -717,29 +711,27 @@ window.SITES = [
       7,
       8,
       9,
-      10,
-      11,
-      12
+      10
     ],
     "topics": [
       "Cells & classification",
       "Energy in cells",
       "Genetics & inheritance",
-      "Disease & immunity"
+      "Disease"
     ],
     "kind": "simulator",
     "tagline": "Zoom from a whole cell down to molecules and poke how they work.",
-    "description": "One zoomable 3D world: plant and animal cells, then organelles (chloroplast, mitochondrion, nucleus) and molecular levels such as membrane transport, DNA to protein, mitosis, meiosis, inheritance, epigenetics and immune defence. A year-level lens changes vocabulary and depth, with 185 NSW dot points mapped; teachers get a class-link/QR page and a revision quiz.",
+    "description": "One zoomable 3D world: plant and animal cells, then organelles (chloroplast, mitochondrion, nucleus) and molecular levels such as membrane transport, DNA to protein, mitosis, meiosis, inheritance, epigenetics and immune defence. A year-level lens changes vocabulary and depth, with 185 NSW dot points mapped, and it extends to senior biology (Years 11 and 12). Teachers get a class-link/QR page and a revision quiz.",
     "outcomes": [
       "SC4-CEL (cells, Stage 4)",
-      "Y7 3.2.3 (via ?code=)",
+      "Y7 3.2.3",
       "Stage 5 genetics/immunity",
       "Biology Y11 M1-M2",
       "Biology Y12 M5"
     ],
     "features": [
       "3D",
-      "year lens",
+      "year-level lens",
       "teacher page",
       "quiz",
       "microscope mode",
@@ -808,7 +800,7 @@ window.SITES = [
       "reduced motion",
       "responsive",
       "missions",
-      "Web Audio"
+      "sound"
     ],
     "last_push": "2026-07-22",
     "stack": "Next.js static export + React + CSS modules (Vinext/Vite)",
@@ -861,7 +853,7 @@ window.SITES = [
     ],
     "kind": "tool",
     "tagline": "Play chords with your hands on the webcam, or keys and touch.",
-    "description": "Students make chords and melodies with hand gestures via the webcam (MediaPipe), or with keyboard, mouse and touch if cameras are blocked. It has 16 synth, keys, band and voice instruments, a theremin mode, a chord pad, 18 song tutorials (chord progressions only, with practice scoring) and light/dark themes. Fully self-hosted so a single allowed domain works on school networks; video never leaves the device.",
+    "description": "Students make chords and melodies with hand gestures via the webcam (MediaPipe), or with keyboard, mouse and touch if cameras are blocked. It has 16 synth, keys, band and voice instruments, a theremin mode, a chord pad, 18 song tutorials (chord progressions only, with practice scoring) and light/dark themes. Fully self-hosted so a single allowed domain works on school networks.",
     "outcomes": [
       "MU4-PER-01",
       "MU4-LIS-01"
@@ -870,7 +862,6 @@ window.SITES = [
       "webcam",
       "hand tracking",
       "works offline after load",
-      "self-hosted",
       "18 song tutorials",
       "16 instruments",
       "theremin",
@@ -922,12 +913,11 @@ window.SITES = [
     ],
     "kind": "simulator",
     "tagline": "A webcam palm reader that sounds sure of itself. Can you prove it wrong?",
-    "description": "Students scan their palm with the webcam (or upload a photo, or use a demo hand). The app traces the heart, head and life lines on the device and gives a confident tarot-style reading. Then they test the claim: repeat scans for reliability, a scatter plot of line length vs age for validity (with a sample class dataset), and a pick-your-own-reading Barnum test, ending with a science vs pseudoscience verdict. No image ever leaves the device. Companion one-page worksheet: How to Read a Palm.",
+    "description": "Students scan their palm with the webcam (or upload a photo, or use a demo hand). The app traces the heart, head and life lines on the device and gives a confident tarot-style reading. Then they test the claim: repeat scans for reliability, a scatter plot of line length vs age for validity (with a sample class dataset), and a pick-your-own-reading Barnum test, ending with a science vs pseudoscience verdict. Companion one-page worksheet: How to Read a Palm.",
     "outcomes": [],
     "features": [
       "webcam",
       "hand tracking",
-      "self-hosted",
       "demo hand / photo fallback",
       "data table + CSV",
       "scatter plot + r",
@@ -972,16 +962,14 @@ window.SITES = [
     ],
     "kind": "game",
     "tagline": "Swim south as a tagged white shark. Every listening station you pass becomes a row of real data.",
-    "description": "A side-scrolling migration game past six real NSW SharkSmart listening stations (Bondi, Cronulla, Stanwell Park, Wollongong, Shellharbour, Kiama). Students eat Australian salmon, dodge fishing line, plastic, shark nets and ship propellers, and use real-biology power-ups (East Australian Current, electro-sense, scent, bait balls). Each station they swim through pings their tag. The ending turns the run into a detection dataset with gaps, compares it with a real NSW DPI white shark's detections from the IMOS Animal Tracking Database, and asks systems, statistics and science reflection questions.",
+    "description": "A side-scrolling migration game past six real NSW SharkSmart listening stations (Bondi, Cronulla, Stanwell Park, Wollongong, Shellharbour, Kiama). Students eat Australian salmon, dodge fishing line, plastic, shark nets and ship propellers, and use real-biology power-ups (East Australian Current, electro-sense, scent, bait balls). Each station they swim through pings their tag. The ending turns the run into a detection dataset with gaps, compares it with a real NSW DPIRD white shark's detections from the IMOS Animal Tracking Database, and asks systems, statistics and science reflection questions.",
     "outcomes": [],
     "features": [
       "3D",
       "game",
-      "self-hosted",
       "real IMOS data",
       "keyboard / touch / gamepad",
-      "fact cards",
-      "teacher notes in README"
+      "fact cards"
     ],
     "teacher_url": null,
     "live_ok": true,
@@ -1000,13 +988,66 @@ window.SITES = [
       "Build the Fake or Fin? data-cleaning mini-game and the four Shark Watch stations (docs/specs)"
     ],
     "unpushed_note": null,
-    "notes": "Tests: npm test 31/31; tests/playtest/flow.mjs 14/14 against the live URL. Spec: shark-watch/docs/specs/.",
+    "notes": "Spec in the repo docs.",
     "focus": [
       "y8-data"
     ],
     "featured": false,
     "audience": "students",
     "shot": "shots/shark-watch.webp"
+  },
+  {
+    "id": "sealed",
+    "repo": "sealed",
+    "url": "https://irvincisneros-png.github.io/sealed/",
+    "title": "Sealed",
+    "subject": "science",
+    "years": [
+      8
+    ],
+    "topics": [
+      "Data science 1",
+      "Scientific models (8.2.2, 8.2.3)"
+    ],
+    "kind": "game",
+    "tagline": "Probe a sealed vault, build a model, then see how close you got.",
+    "description": "A 3D vault game about scientific models. Each sealed vault hides an object you cannot open. Students spend a limited budget on probes (bounce, x-ray, scale and thermal), paint a blueprint model from their observations, check it against new data, then watch the reveal to see how close the model was. Six hand-made cases, with stars and collectable cards for better models.",
+    "outcomes": [
+      "8.2.2",
+      "8.2.3"
+    ],
+    "features": [
+      "3D",
+      "game",
+      "build a model from data",
+      "four probe types",
+      "blueprint painting",
+      "six cases"
+    ],
+    "teacher_url": null,
+    "live_ok": true,
+    "last_push": "2026-11-12",
+    "stack": "vanilla ES modules + three.js (vendored), no build step",
+    "maker_status": "needs-polish",
+    "public_badge": "beta",
+    "coverage": "Complete game: six cases, four probe types, blueprint painting, model check, new-data round, reveal and stars",
+    "issues": [
+      "No \"Learning Hub\" link back to the hub yet",
+      "Slow first cold load on a phone, with no loading screen"
+    ],
+    "next_steps": [
+      "Add a \"← Learning Hub\" link on the title screen",
+      "Add a loading screen for the first load",
+      "Class trial on Chromebooks and phones"
+    ],
+    "unpushed_note": null,
+    "notes": "Mapped to Year 8 Data science 1 (8.2.2, 8.2.3).",
+    "focus": [
+      "y8-data"
+    ],
+    "featured": false,
+    "audience": "students",
+    "shot": "shots/sealed.webp"
   },
   {
     "id": "fur-and-fang",
@@ -1019,15 +1060,17 @@ window.SITES = [
     ],
     "topics": [
       "Genetics & evolution",
-      "Natural selection"
+      "Natural selection",
+      "Speciation"
     ],
     "kind": "simulator",
     "tagline": "Keep a warren of rabbits alive for 15 minutes while winters, droughts and foxes reshape the valley.",
-    "description": "A 3D natural-selection simulator. Rabbits carry three genes with real trade-offs (fur camouflage, ear length and Allen's rule, teeth vs tough food). Explore mode is a teacher sandbox with snow, temperature, food and fox controls, dominance pickers, genotype view, pedigrees, a bottleneck button, Predict-Observe-Explain prompts and CSV export. Survive 15:00 makes students the valley ranger: they cannot choose mutations, so they read the forecast and use gene flow, clover, shelter and fences so the variation exists before the pressure arrives. A guided tutorial and an end-of-run report with allele charts, causes of death and reflection questions are included.",
+    "description": "A 3D natural-selection and speciation simulator. Rabbits carry three genes with real trade-offs (fur camouflage, ear length and Allen's rule, teeth vs tough food). Explore mode is a sandbox with snow, temperature, food and fox controls, dominance pickers, genotype view, pedigrees, a bottleneck button, Predict-Observe-Explain prompts and CSV export. Survive 15:00 makes students the valley ranger: they read the forecast and use gene flow, clover, shelter and fences so the variation exists before the pressure arrives. Islands is a speciation lab: flood the river, strand castaways on an islet, reopen the crossing and ask whether the two sides still breed, across six investigations on isolation, drift and the founder effect. Two Lineages 10:00 splits the warren and asks students to predict whether the two sides are still one species. A guided tutorial and an end-of-run report with allele charts, causes of death and reflection questions are included.",
     "outcomes": [],
     "features": [
       "3D",
       "sim",
+      "speciation lab (Islands)",
       "game",
       "tutorial",
       "free camera (WASD)",
@@ -1041,18 +1084,17 @@ window.SITES = [
     "stack": "vanilla ES modules + three.js (vendored)",
     "maker_status": "needs-polish",
     "public_badge": "beta",
-    "coverage": "Explore + Survive 15:00 + 8-step tutorial; Codex playtest findings fixed; balance: do-nothing 15% survive, forecast-only planner 97.5% (40 seeds); 35 unit tests",
+    "coverage": "Explore, Survive 15:00, Islands (6 investigations), Two Lineages 10:00 and an 8-step tutorial",
     "issues": [
       "Not yet played through by hand or tested on a Chromebook/touch device",
       "Real frame rate unmeasured",
       "Big text + tutorial card may overlap the graph at 1280x720"
     ],
     "next_steps": [
-      "Class trial on Chromebooks",
-      "Speciation/islands extension (ideas pending)"
+      "Class trial on Chromebooks"
     ],
     "unpushed_note": null,
-    "notes": "Tests: npm test 35; npm run balance for the 40+80 seed sweep. Spec: fur-and-fang/docs/SPEC.md.",
+    "notes": "Specs in the repo docs.",
     "focus": [
       "y10-genetics"
     ],
@@ -1080,7 +1122,6 @@ window.SITES = [
     "features": [
       "3D",
       "game",
-      "self-hosted",
       "fair test planner",
       "dot plot + trial order plot",
       "data table + CSV",
@@ -1103,7 +1144,7 @@ window.SITES = [
       "Pair with the Testing and supporting claims worksheet"
     ],
     "unpushed_note": null,
-    "notes": "Tests: npm test passes 30/30. Design reviewed adversarially by Codex (docs/SPEC.md v2).",
+    "notes": "Spec in the repo docs.",
     "focus": [
       "y10-data"
     ],
@@ -1127,7 +1168,7 @@ window.SITES = [
     ],
     "kind": "game",
     "tagline": "Surf a wave, wipe out, then freedive into living reefs.",
-    "description": "A third-person surfing and first-person freediving game across five Australian sites (GBR, Illawarra kelp reef, Moreton Bay seagrass, open ocean, Tasmanian deep seamount). Each has 17-26 sourced field-guide species, an underwater camera and journal, five missions with questions and an ecosystem lab. Teacher page generates mission links and QR codes; students can export a CSV.",
+    "description": "A third-person surfing and first-person freediving game across five Australian sites (Great Barrier Reef, Illawarra kelp reef, Moreton Bay seagrass, open ocean, Tasmanian deep seamount). Each has 17-26 sourced field-guide species, an underwater camera and journal, five missions with questions and an ecosystem lab. Teacher page generates mission links and QR codes; students can export a CSV.",
     "outcomes": [],
     "features": [
       "3D",
@@ -1146,19 +1187,19 @@ window.SITES = [
     "last_push": "2026-10-28",
     "stack": "vanilla JS ES modules + Three.js r169, Blender-made cosy models, node:test",
     "maker_status": "needs-polish",
-    "public_badge": "ready",
+    "public_badge": "beta",
     "coverage": "all 5 planned sites live with species, missions and labs",
     "issues": [
       "No explicit syllabus dot-point mapping; targets NSW Stage 5 Marine & Aquaculture Technology (elective) in general terms",
       "Touch/phone controls never tried on a real phone",
-      "Open Codex review items: lab assessment awards completion on single-run thresholds; deep-sea lab model lacks age-at-maturity; pelagic energy transfer not demonstrated; some hidden-agent ecology edge cases",
+      "Open review items: lab assessment awards completion on single-run thresholds; deep-sea lab model lacks age-at-maturity; pelagic energy transfer not demonstrated; some hidden-agent ecology edge cases",
       "Keyboard and mouse on a laptop only (Chrome/Edge)",
       "No HANDOVER/PLAN doc in repo (only art-style plan and specs)",
       "Heavy 3D; low-tier performance on real school laptops unconfirmed"
     ],
     "next_steps": [
       "Test touch controls on a real phone and a school Chromebook",
-      "Fix remaining Codex review items (lab assessment, deep and pelagic models)",
+      "Fix remaining review items (lab assessment, deep and pelagic models)",
       "Add a syllabus mapping page (Marine & Aquaculture Tech outcomes) and write a HANDOVER/PLAN",
       "Add cosy animation clips (crab scuttle, bird take-off) and remodel larger rigs",
       "Pilot with the Y9-10 class and collect feedback"
@@ -1190,8 +1231,8 @@ window.SITES = [
       "Sustainable fishing"
     ],
     "kind": "game",
-    "tagline": "Gotta catch 'em all… and release the small.",
-    "description": "A cosy top-down fishing game on the Illawarra coast. Fish five sites (Bellambi beach and rocks, Lake Illawarra, Belmore Basin wharf, an offshore reef by boat with a fish finder, and a freshwater river) to complete the 25-species Illawarra Fish Guide. Identify each catch with a dichotomous key, measure it, and decide keep or release using DPIRD size, bag and possession limits. Earn Club credits from citizen-science records, tag-and-release and club comps (never by selling your catch), talk to locals for tips and trades, and finish with an awards night and a commercial co-op post-game with a nets lab. Teacher page maps it to Aquatic Technology Module 2.",
+    "tagline": "Read the water, know the rules and fish for the future.",
+    "description": "A cosy top-down fishing game on the Illawarra coast. Fish five sites (Bellambi beach and rocks, Lake Illawarra, Belmore Basin wharf, an offshore reef by boat with a fish finder, and a freshwater river) to complete the 25-species Illawarra Fish Guide. Identify each catch with a dichotomous key, measure it, and decide keep or release using NSW DPIRD size, bag and possession limits. Earn Club credits from citizen-science records, tag-and-release and club comps (never by selling your catch), talk to locals for tips and trades, and finish with an awards night and a commercial co-op post-game with a nets lab. Teacher page maps it to Aquatic Technology Module 2.",
     "outcomes": [],
     "features": [
       "3D",
@@ -1256,7 +1297,7 @@ window.SITES = [
       "quiz",
       "fossil range data",
       "real Illawarra cliff",
-      "year lens (y8/ext)"
+      "year-level lens"
     ],
     "teacher_url": "https://irvincisneros-png.github.io/deeptime/teacher.html",
     "live_ok": true,
@@ -1293,10 +1334,9 @@ window.SITES = [
     "id": "mineral-detective-lab",
     "repo": "mineral-detective-lab",
     "url": "https://irvincisneros-png.github.io/mineral-detective-lab/",
-    "title": "Mineral Detective Lab",
+    "title": "Mineral Lab",
     "subject": "science",
     "years": [
-      7,
       8,
       9
     ],
@@ -1365,7 +1405,7 @@ window.SITES = [
       "Solutions & mixtures"
     ],
     "kind": "simulator",
-    "tagline": "Run real lab experiments on a 3D bench, then zoom in to particles.",
+    "tagline": "Run virtual lab experiments on a 3D bench, then zoom in to particles.",
     "description": "Year 7 Solutions and Mixtures as a 3D lab bench. The live version has Station 1 (states of matter with a live heating curve and particle view) and Station 2 (density: float/sink lab, density column, buoyancy). Use for the matching Term 4 lessons; a teacher page and a 200-item revision bank are included.",
     "outcomes": [
       "SC4-SOL-01",
@@ -1377,7 +1417,7 @@ window.SITES = [
       "particle view",
       "teacher page",
       "quiz",
-      "year lens (y7/ext)",
+      "year-level lens",
       "heating curve"
     ],
     "teacher_url": "https://irvincisneros-png.github.io/mixlab/teacher.html",
@@ -1435,27 +1475,26 @@ window.SITES = [
       "Change",
       "Data science 1",
       "Energy",
-      "Diseases",
+      "Disease",
       "Materials",
       "Environmental sustainability",
-      "Genetics & evolutionary change",
-      "Chemical reactions",
+      "Genetics & evolution",
+      "Reactions",
       "Waves & motion",
       "Data science 2"
     ],
     "kind": "game",
     "tagline": "Defend your lab from science myths by answering syllabus questions.",
-    "description": "A tower-defence revision game where history's scientific misconceptions attack and students earn Research Points by answering questions to upgrade towers. About 895 multiple-choice questions cover all four topics in each of Years 7-10, selectable by year, topic or half-yearly/yearly exam pool. Best used as low-stakes retrieval practice after teaching, not as a stand-alone lesson.",
+    "description": "A tower-defence revision game where history's scientific misconceptions attack and students earn Research Points by answering questions to upgrade towers. About 895 multiple-choice questions cover all four topics in each of Years 7-10, selectable by year, topic or a mixed revision pool. Best used as low-stakes retrieval practice after teaching, not as a stand-alone lesson.",
     "outcomes": [],
     "features": [
       "quiz",
       "895 questions",
       "20 levels + endless",
-      "exam-pool revision",
+      "revision by year or topic",
       "heroes & towers",
       "audio",
-      "local save",
-      "mobile layout (in progress)"
+      "local save"
     ],
     "teacher_url": null,
     "live_ok": true,
@@ -1522,9 +1561,8 @@ window.SITES = [
     "features": [
       "3D",
       "timeline slider",
-      "no build step",
-      "real data (PB2002, Natural Earth, NASA)",
       "disaster scenarios",
+      "real plate and NASA data",
       "satellite imagery"
     ],
     "last_push": "2026-09-11",
@@ -1583,9 +1621,9 @@ window.SITES = [
       "The orchestra",
       "Film music"
     ],
-    "kind": "course-site",
+    "kind": "tool",
     "tagline": "Practise guitar, piano, rhythm, listening and reading music.",
-    "description": "A Stage 4 (Years 7-8) music practice site for NSW Music 7-10 students: 17 topic pages (8 for Year 7, 9 for Year 8) with interactive drum pads, a piano with free play and real grand-piano samples, guitar and tuner studios, clef trainer, rhythm game, guided listening, improvisation bits, quizzes and a Year 8 song practice room. Tracks progress anonymously on the device; no login. Students use it for homework or class practice alongside Classroom tasks.",
+    "description": "A Stage 4 (Years 7-8) music practice site for NSW Music 7-10 students: 17 topic pages (8 for Year 7, 9 for Year 8) with interactive drum pads, a piano with free play and real grand-piano samples, guitar and tuner studios, clef trainer, rhythm game, guided listening, improvisation bits, quizzes and a Year 8 song practice room. No login needed. Students use it for homework or class practice alongside Classroom tasks.",
     "outcomes": [
       "MU4-PER-01",
       "MU4-LIS-01",
@@ -1606,28 +1644,27 @@ window.SITES = [
     "teacher_url": null,
     "live_ok": true,
     "last_push": "2026-10-28",
-    "stack": "React 19 + Vite (live repo); source copy is React 18 + in-browser Babel",
+    "stack": "React 19 + Vite",
     "maker_status": "in-progress",
     "public_badge": "ready",
     "coverage": "17 topic pages live (Year 7: 8, Year 8: 9); Year 9 content not started",
     "issues": [
-      "Two diverging copies: the public GitHub repo is now a Vite/React 19 rebuild with a 'companion' hub, tuner fixes and the Year 8 song practice room, while the iCloud source folder is the older Babel version without companion-home or the July PR work, so syncing by rsync would overwrite live work",
+      "Two copies of the source are out of step; reconcile them before any further edits",
       "Progress/completion rules are too easy (counts exposure, not mastery) per the owner's open-items list; assessment is mostly MCQ recall",
       "Companion data contains 2 'planned' activity links with no component yet",
       "No automated tests; verification is a manual jsdom/compile script that lives in /tmp",
-      "Public footer scrubbed to 'Music Faculty' (verify scrub stays in place after any resync); no teacher page for the public version",
       "Year 8 Semester 2 teaching decks (19 HTML decks) are not published; Year 9 not started"
     ],
     "next_steps": [
-      "Reconcile the two copies: make the GitHub repo the source of truth or port the Vite/companion work back, before any further edits",
+      "Reconcile the two copies of the source before any further edits",
       "Decide module-completion rules (mastery vs exposure) and rebalance quizzes toward applied tasks",
       "Review which of the unpublished Year 8 decks (and the studio decks) are fit to publish, keep copyrighted/staff material out",
       "Add outcome chips per topic from the 2024 syllabus (MU4-PER/LIS/COM) and a short teacher page",
       "Implement or remove the 2 planned companion activities; add a few smoke tests to CI",
       "Add a 'Back to home' link in the header once the new homepage exists"
     ],
-    "unpushed_note": "Piano free-play (key-name pop-ups, treble stave, full-screen, grand-piano samples) was committed in the source folder and is ALREADY live on the GitHub repo (pushed 28 Oct), contrary to the earlier memory note. Still uncommitted locally and not live: a Reset button on the step-sequencer (interactives/section-bits.jsx), an untracked CONTINUE.md handover, and the 19-deck Year 8 Semester 2 'decks/' folder. The source folder is a local-only git repo with no remote.",
-    "notes": "Source of truth for the maintained app is the iCloud 'stage4musicsite' folder per the owner, but the public repo carries July 2026 work missing from it. Uses NSW Music 7-10 (2024) Stage 4 framing; no staff names published.",
+    "unpushed_note": "A Reset button on the step-sequencer and the 19-deck Year 8 Semester 2 decks folder are still local and not live.",
+    "notes": "Uses NSW Music 7-10 (2024) Stage 4 framing.",
     "focus": [],
     "featured": true,
     "audience": "students",
@@ -1643,7 +1680,7 @@ window.SITES = [
       10
     ],
     "topics": [
-      "Chemical reactions"
+      "Reactions"
     ],
     "kind": "game",
     "tagline": "Balance equations and name compounds to beat pixel monsters.",
@@ -1719,7 +1756,7 @@ window.SITES = [
       "teacher-led",
       "works offline (Lexend font optional)"
     ],
-    "teacher_url": "https://irvincisneros-png.github.io/year-9-materials-adjusted/",
+    "teacher_url": null,
     "last_push": "2026-07-25",
     "stack": "static HTML, self-contained decks (images embedded), no framework",
     "maker_status": "finished",
@@ -1756,7 +1793,7 @@ window.SITES = [
     ],
     "kind": "simulator",
     "tagline": "Launch waves, tune the spectrum and test ideas in virtual investigations.",
-    "description": "Offline-capable React app covering the NSW Waves topic (sound, light, EM spectrum, hearing, vision, ultrasound, astronomy) with simulators, investigations, a 101-question mastery bank and teacher tools. Use for demonstrations, guided investigations or revision; progress is stored locally in the browser.",
+    "description": "Offline-capable React app covering the Waves and motion topic (sound, light, EM spectrum, hearing, vision, ultrasound, astronomy) with simulators, investigations, a 101-question mastery bank and teacher tools. Use for demonstrations, guided investigations or revision; progress is stored locally in the browser.",
     "outcomes": [
       "7.1.1",
       "7.1.2",
@@ -1789,7 +1826,7 @@ window.SITES = [
     "stack": "TypeScript + React 19 + Vite + Canvas/SVG (hash routing)",
     "maker_status": "needs-polish",
     "public_badge": "beta",
-    "coverage": "24 active outcomes; only 7.1.1-7.1.4 (+7.2.2 visualiser) are on the new outcome-first simulator standard, the rest are 'transitional launchers'; 7.2.5 deliberately deferred",
+    "coverage": "Outcomes 7.1.1-7.3.4 (except 7.2.5) are listed; only 7.1.1-7.1.4 (+7.2.2 visualiser) are on the new outcome-first simulator standard, the rest are \"transitional launchers\"; 7.2.5 deliberately deferred",
     "issues": [
       "Docs say only 7.1.1-7.1.4 passed the corrected-direction (outcome-first) gate; remaining outcomes are explicit transitional launchers, not final quality",
       "Status docs still say 'verified (builder; user approval pending)' - no owner sign-off recorded",
@@ -1805,7 +1842,7 @@ window.SITES = [
       "Source community-approved material for 7.2.5 or hide the gap clearly",
       "Check 7.x vs Year 10 labelling and set the homepage card badge accordingly"
     ],
-    "notes": "Last push 6 Aug 2026; local clone matches origin/main. Strong engineering/test base (254 unit + 761 browser checks) but not touched for 12 weeks.",
+    "notes": "Last push 6 Aug 2026. Strong engineering base, not updated since August.",
     "unpushed_note": null,
     "subject": "science",
     "live_ok": true,
@@ -1926,9 +1963,9 @@ window.SITES = [
     "coverage": "4 of 4 topics; every examined dot point has a recap, worked examples, practice and a self-check",
     "issues": [],
     "next_steps": [
-      "Update ratings and questions if next year's exam blueprint changes"
+      "Review the exam-focus ratings and questions each year"
     ],
-    "notes": "Built 2026-10-31. Dot points and weighting taken from the 2026 Yearly Exam blueprint; every question is original and was checked against the real paper before publishing (no exam content in the repo).",
+    "notes": "Original practice questions organised by syllabus dot point.",
     "focus": [
       "y7-universe",
       "y7-forces",
@@ -1951,10 +1988,10 @@ window.SITES = [
       10
     ],
     "topics": [
-      "Genetics & evolutionary change",
+      "Genetics & evolution",
       "Reactions",
       "Waves & motion",
-      "Data science"
+      "Data science 2"
     ],
     "kind": "revision",
     "tagline": "Revise the high-value ideas: recaps, worked examples, practice and model answers.",
@@ -1984,9 +2021,9 @@ window.SITES = [
     "coverage": "4 of 4 topics; every examined dot point has a recap, worked examples, practice and a self-check",
     "issues": [],
     "next_steps": [
-      "Update ratings and questions if next year's exam blueprint changes"
+      "Review the exam-focus ratings and questions each year"
     ],
-    "notes": "Built 2026-10-31. Dot points and weighting taken from the 2026 Yearly Exam blueprint; every question is original and was checked against the real paper before publishing (no exam content in the repo).",
+    "notes": "Original practice questions organised by syllabus dot point.",
     "focus": [
       "y10-genetics",
       "y10-chem",
@@ -2015,7 +2052,7 @@ window.SITES = [
       "Scientific models (8.2.2, 8.2.3)"
     ],
     "kind": "simulator",
-    "tagline": "Zoom from the smallest thing physics can describe to the edge of the observable universe, in one continuous 3D dive.",
+    "tagline": "Zoom from the Planck scale to the cosmic web in one dive.",
     "description": "A seamless 3D zoom through 62 powers of ten with 20 hand-built scenes: Planck scale, proton, carbon nucleus, carbon atom, DNA (real crystal structure), bacteriophage, E. coli, skin cell, a grain of sand, an ant, a person standing on Woonona Beach (built from real map and elevation data), Earth (NASA imagery), the Earth-Moon system, the Sun, Betelgeuse, the Solar System at true distances, the Orion Nebula, Omega Centauri, the Milky Way and the cosmic web out to the oldest light. Every scene carries a Measured / Modelled / Speculative badge and a How do we know? note. Includes a compare tray, guided tours, scavenger-hunt missions, a time and light layer, and a teacher page.",
     "outcomes": [],
     "features": [

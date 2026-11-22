@@ -1,11 +1,12 @@
 (function () {
   'use strict';
   var SITES = window.SITES || [], AREAS = window.FOCUS_AREAS || [];
-  var YEAR_COL = { 7: 'var(--y7)', 8: 'var(--y8)', 9: '#3a67b0', 10: 'var(--y10)' };
+  var YEAR_COL = { 7: 'var(--y7)', 8: 'var(--y8)', 9: 'var(--y9)', 10: 'var(--y10)' };
   var KIND = { simulator: 'Simulator', game: 'Game', 'course-site': 'Notebook', revision: 'Revision', slides: 'Slides', tool: 'Tool' };
   var BADGE = { ready: 'Ready', beta: 'Beta', 'coming-soon': 'Coming soon' };
   var SIMKINDS = { simulator: 1, game: 1, tool: 1 };
   var TYPES = [['all', 'All'], ['play', 'Simulators & games'], ['notes', 'Notebooks & revision'], ['teach', 'Teacher resources']];
+  var COVER = { 'course-site': 1, revision: 1, slides: 1 };
   var LS = 'whlh.class';
   var state = { year: 'all', subject: 'all', type: 'all', q: '' };
 
@@ -55,6 +56,25 @@
     var ys = s.years || [];
     return ys.length === 1 && YEAR_COL[ys[0]] ? YEAR_COL[ys[0]] : 'var(--neutral)';
   }
+  function shot(s, opts) {
+    if (COVER[s.kind] || s.cover || !s.shot) {
+      var ys = (s.years || []).slice().sort(function (a, b) { return a - b; });
+      var big = s.subject === 'music' ? '♪' : (ys.length === 1 ? String(ys[0]) : (ys.length ? ys[0] + '–' + ys[ys.length - 1] : ''));
+      return h('div', { 'class': 'shot cover', 'aria-hidden': 'true' }, [
+        h('span', { 'class': 'cv-kind', text: KIND[s.kind] || s.kind }),
+        h('span', { 'class': 'cv-big' + (big.length > 2 ? ' long' : ''), text: big }),
+        h('span', { 'class': 'cv-title', text: s.title })
+      ]);
+    }
+    return h('div', { 'class': 'shot' }, [h('img', { src: s.shot, alt: 'Screenshot of ' + s.title, width: 640, height: 400, loading: opts.eager ? 'eager' : 'lazy', decoding: 'async' })]);
+  }
+  // compact one-line link for a site already shown as a full card earlier in the same year
+  function mini(s) {
+    return h('li', null, [h('a', { 'class': 'mini', href: s.url, style: '--accent:' + accentFor(s) }, [
+      h('span', { 'class': 'mini-t', text: s.title }),
+      h('span', { 'class': 'mini-k', text: KIND[s.kind] || s.kind })
+    ])]);
+  }
   function card(s, opts) {
     opts = opts || {};
     var yl = yearLabel(s.years);
@@ -71,7 +91,7 @@
       s.teacher_url ? h('a', { 'class': 'tlink', href: s.teacher_url, text: 'Teacher page →' }) : null
     ]);
     var el = h('article', { 'class': 'card' + (opts.wide ? ' wide' : ''), style: '--accent:' + accentFor(s), 'data-id': s.id }, [
-      h('div', { 'class': 'shot' }, [h('img', { src: s.shot, alt: 'Screenshot of ' + s.title, width: 640, height: 400, loading: opts.eager ? 'eager' : 'lazy', decoding: 'async' })]),
+      shot(s, opts),
       h('div', { 'class': 'card-body' }, [
         meta,
         h('div', { 'class': 'title-row' }, [h('h3', { text: s.title }), h('span', { 'class': 'badge ' + s.public_badge, text: BADGE[s.public_badge] || s.public_badge })]),
@@ -94,7 +114,7 @@
   function renderFeatured() {
     var list = SITES.filter(function (s) { return s.featured && pass(s); });
     var head = h('div', { 'class': 'sec-head' }, [h('h2', { id: 'h-featured', text: 'Featured' }), h('p', { text: 'Good places to start.' })]);
-    sec($('featured'), head, list.length ? [h('div', { 'class': 'scroller', role: 'list' }, list.map(function (s) { mark(s); var c = card(s, { eager: false }); c.setAttribute('role', 'listitem'); return c; }))] : []);
+    sec($('featured'), head, list.length ? [h('div', { 'class': 'scroller feat', role: 'list' }, list.map(function (s) { mark(s); var c = card(s, { eager: false }); c.setAttribute('role', 'listitem'); return c; }))] : []);
   }
 
   function renderYears() {
@@ -104,20 +124,24 @@
       var courseSite = SITES.filter(function (s) { return s.kind === 'course-site' && s.subject === 'science' && s.years.length === 1 && s.years[0] === y; })[0];
       // a single-year revision site sits once beside the notebook, not in every topic row
       var yearRev = SITES.filter(function (s) { return s.kind === 'revision' && s.subject === 'science' && s.years.length === 1 && s.years[0] === y && pass(s); });
-      var rows = [];
+      var rows = [], seen = {};
       AREAS.filter(function (a) { return a.year === y; }).forEach(function (a) {
         var list = SITES.filter(function (s) { return s.kind !== 'course-site' && yearRev.indexOf(s) < 0 && (s.focus || []).indexOf(a.id) >= 0 && s.focus.length <= 6 && pass(s); });
         if (!list.length && filtered()) return;
         list.forEach(mark);
-        rows.push(h('div', { 'class': 'topic' }, [
+        var full = list.filter(function (s) { return !seen[s.id]; }), again = list.filter(function (s) { return seen[s.id]; });
+        full.forEach(function (s) { seen[s.id] = 1; });
+        var span = full.length >= 3 ? 'span-full' : full.length === 2 ? 'span-2' : 'span-1';
+        var body = [];
+        if (full.length) body.push(h('div', { 'class': 'grid n' + Math.min(full.length, 3) }, full.map(function (s) { return card(s); })));
+        if (again.length) body.push(h('div', { 'class': 'again' }, [h('p', { text: full.length ? 'Also covers this topic' : 'Covered by' }), h('ul', null, again.map(mini))]));
+        if (!list.length) body.push(h('p', { 'class': 'placeholder' }, [h('strong', { text: 'Simulator coming soon.' }), ' The notebook covers this topic for now.']));
+        rows.push(h('div', { 'class': 'topic ' + span }, [
           h('div', { 'class': 'topic-head' }, [
             h('h3', { text: a.name }),
             h('a', { 'class': 'nb-link', href: a.course_url, 'aria-label': 'Notebook for ' + a.name, text: 'Notebook' })
-          ]),
-          list.length
-            ? h('div', { 'class': 'grid' }, list.map(function (s) { return card(s); }))
-            : h('div', { 'class': 'placeholder' }, [h('strong', { text: 'Simulator coming soon' }), h('span', { text: 'The notebook above covers this topic in the meantime.' })])
-        ]));
+          ])
+        ].concat(body)));
       });
       var course = courseSite && pass(courseSite) ? courseSite : null;
       if (course) mark(course);
@@ -129,8 +153,9 @@
           h('div', null, [h('h2', { id: 'h-y' + y, text: 'Year ' + y }), h('p', { text: AREAS.filter(function (a) { return a.year === y; }).length + ' topics, in syllabus order' })])
         ]),
         course ? h('div', { 'class': 'course-strip' }, [card(course, { wide: true })]) : null,
-        yearRev.length ? h('div', { 'class': 'course-strip' }, yearRev.map(function (r) { return card(r, { wide: true }); })) : null
-      ].concat(rows));
+        yearRev.length ? h('div', { 'class': 'course-strip' }, yearRev.map(function (r) { return card(r, { wide: true }); })) : null,
+        rows.length ? h('div', { 'class': 'topics' }, rows) : null
+      ]);
       root.appendChild(s);
     });
   }
@@ -167,8 +192,6 @@
   /* ── Controls & hash ───────────────────────────────────────── */
   function groupDefs() {
     return {
-      year: [['all', 'All'], ['7', '7'], ['8', '8'], ['9', '9'], ['10', '10']],
-      subject: [['all', 'All'], ['science', 'Science'], ['music', 'Music']],
       type: TYPES
     };
   }
@@ -236,7 +259,10 @@
     $('reset').addEventListener('click', resetAll);
     $('empty-reset').addEventListener('click', resetAll);
     Array.prototype.forEach.call(document.querySelectorAll('.class-btn'), function (b) {
-      b.addEventListener('click', function () { pickClass(b.getAttribute('data-class'), true); });
+      b.addEventListener('click', function () {
+        if (b.getAttribute('aria-pressed') === 'true') { store('set', ''); resetAll(); return; }
+        pickClass(b.getAttribute('data-class'), true);
+      });
     });
     window.addEventListener('hashchange', function () { readHash(); render(); });
 
