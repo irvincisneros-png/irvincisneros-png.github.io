@@ -2154,5 +2154,58 @@ window.SITES = [
     "featured": false,
     "audience": "students",
     "shot": "shots/live-wire.webp"
+  },
+  {
+    "id": "ground-truth",
+    "repo": "ground-truth",
+    "url": "https://irvincisneros-png.github.io/ground-truth/",
+    "title": "Ground Truth",
+    "subject": "science",
+    "years": [
+      9
+    ],
+    "topics": [
+      "Environmental sustainability"
+    ],
+    "kind": "simulator",
+    "tagline": "How satellites measure a warming planet, and how far you can trust the data.",
+    "description": "A one-period Year 9 lesson-game on real satellite data. Four sensor stations on a 3D globe (thermal infrared, radar altimeter, optical, passive microwave) show the raw signal behind each number. Students then predict which part of the Great Barrier Reef bleached in 2024, spend one survey flight, and let the aerial survey overturn them. Trap cases on sea level, forest loss and sea ice end on the long record, and a Minister briefing scores claim strength, evidence and limitations.",
+    "outcomes": [
+      "Y9 Environmental sustainability 4.3.4"
+    ],
+    "features": [
+      "3D globe",
+      "real data",
+      "teacher page",
+      "autosave",
+      "printable summary",
+      "keyboard accessible"
+    ],
+    "teacher_url": "https://irvincisneros-png.github.io/ground-truth/teacher.html",
+    "live_ok": true,
+    "last_push": "2026-11-24",
+    "stack": "Vite + TypeScript + Three.js, Vitest (157 tests), GitHub Actions deploy",
+    "maker_status": "needs-polish",
+    "public_badge": "beta",
+    "coverage": "4.3.4 complete: sensor lab, reef investigation, three transfer cases, briefing, debrief",
+    "issues": [
+      "First Nations content is draft and hidden (?draft) pending review with the school's Aboriginal education contact",
+      "NSIDC Sea Ice Index has no formal licence (citation only)",
+      "Reef data is regional (NOAA virtual stations), not single reefs; flagged in-app",
+      "Not tested on a real Chromebook or phone; never piloted with a class"
+    ],
+    "next_steps": [
+      "Pilot with one Year 9 class and time each part",
+      "Review the First Nations content, then remove the draft flag",
+      "Test on a school Chromebook (globe low-quality fallback)"
+    ],
+    "unpushed_note": null,
+    "notes": "Built 2026-11-24 after adversarial reviews by Fable 5.2 and Codex. Pairs with Carrying Capacity's satellite drawer.",
+    "focus": [
+      "y9-env"
+    ],
+    "featured": false,
+    "audience": "students",
+    "shot": "shots/ground-truth.webp"
   }
 ];
