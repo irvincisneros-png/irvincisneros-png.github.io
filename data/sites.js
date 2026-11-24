@@ -527,6 +527,7 @@ window.SITES = [
   {
     "id": "aural-skills-quiz",
     "repo": "aural-skills-quiz",
+    "cover": true,
     "url": "https://irvincisneros-png.github.io/aural-skills-quiz/",
     "title": "Year 8 Aural Skills Quiz",
     "subject": "music",
