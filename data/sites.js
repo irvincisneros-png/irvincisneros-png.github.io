@@ -2168,26 +2168,26 @@ window.SITES = [
       "Environmental sustainability"
     ],
     "kind": "simulator",
-    "tagline": "How satellites measure a warming planet, and how far you can trust the data.",
-    "description": "A one-period Year 9 lesson-game on real satellite data. Four sensor stations on a 3D globe (thermal infrared, radar altimeter, optical, passive microwave) show the raw signal behind each number. Students then predict which part of the Great Barrier Reef bleached in 2024, spend one survey flight, and let the aerial survey overturn them. Trap cases on sea level, forest loss and sea ice end on the long record, and a Minister briefing scores claim strength, evidence and limitations.",
+    "tagline": "Use real satellite pictures to check on the ice, forests, sea and reef, then fly Orbit Run.",
+    "description": "A Year 9 lesson on how satellites collect climate data. Satellite Spotter (the default, built for students who find reading hard) runs four short missions on ice, forest, sea level and the reef: pick the right satellite eye, watch it scan, slide between real before and after satellite images, and build one sentence about what it shows, ending with a printable report card. Orbit Run is an optional arcade game where you match the right sensor to the ground below while dodging space junk, clouds and night. Challenge mode keeps the harder evidence-strength lesson (reef investigation, trap cases, Minister briefing) for strong students.",
     "outcomes": [
       "Y9 Environmental sustainability 4.3.4"
     ],
     "features": [
-      "3D globe",
-      "real data",
+      "3 modes",
+      "arcade game",
+      "real satellite images",
+      "read-aloud",
       "teacher page",
-      "autosave",
-      "printable summary",
-      "keyboard accessible"
+      "printable report card"
     ],
     "teacher_url": "https://irvincisneros-png.github.io/ground-truth/teacher.html",
     "live_ok": true,
     "last_push": "2026-11-24",
-    "stack": "Vite + TypeScript + Three.js, Vitest (157 tests), GitHub Actions deploy",
+    "stack": "Vite + TypeScript + Three.js + Canvas 2D, Vitest (215 tests), GitHub Actions deploy",
     "maker_status": "needs-polish",
     "public_badge": "beta",
-    "coverage": "4.3.4 complete: sensor lab, reef investigation, three transfer cases, briefing, debrief",
+    "coverage": "4.3.4 complete in three modes: Satellite Spotter (default), Orbit Run arcade, Challenge",
     "issues": [
       "First Nations content is draft and hidden (?draft) pending review with the school's Aboriginal education contact",
       "NSIDC Sea Ice Index has no formal licence (citation only)",
